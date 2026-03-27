@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" content="An IT toolkit with various tools for free.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferlaty | IT Automation Toolkit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.ico">
+   <link rel="stylesheet" href="css/menuanimation.css">
+   <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/content_pages.css">
+</head>
+
+
+<body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col min-w-full">
+
+   <a id="myBtn" title="Go to top" href="#"><svg width="50px" height="50px" viewBox="0 0 24 24">
+      <path
+        d="M18.2929 15.2893C18.6834 14.8988 18.6834 14.2656 18.2929 13.8751L13.4007 8.98766C12.6195 8.20726 11.3537 8.20757 10.5729 8.98835L5.68257 13.8787C5.29205 14.2692 5.29205 14.9024 5.68257 15.2929C6.0731 15.6835 6.70626 15.6835 7.09679 15.2929L11.2824 11.1073C11.673 10.7168 12.3061 10.7168 12.6966 11.1073L16.8787 15.2893C17.2692 15.6798 17.9024 15.6798 18.2929 15.2893Z"
+        fill="#FFFFFF" />
+    </svg></a>
+
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.classList.add("transition"); // Use .add, not .toggle
+      } else {
+        mybutton.classList.remove("transition");
+      }
+    }
+  </script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner"
+    style="position:fixed;bottom:0;width:100%;background:#010e14f5;color:#fefeff;padding:15px;text-align:center;display:none; z-index: 1;">
+    We use cookies to ensure you have the best experience on our website.
+    <a href="legal.html" class="text-blue-900 hover:underline">Read more</a>
+    <button id="accept-cookies" style="margin-left:10px;padding:5px 10px;"
+      class="inline-block m mt-0 px-10 py-2 bg-cyan-550 rounded-lg hover:bg-cyan-700 transition"><b>Accept</b></button>
+  </div>
+
+  <script>
+    setCookie = (cName, cValue, expDays) => {
+      let date = new Date();
+      date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+      const expires = "expires=" + date.toUTCString();
+      document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+    }
+
+    getCookie = (cName) => {
+      const name = cName + "=";
+      const cDecoded = decodeURIComponent(document.cookie);
+      const cArr = cDecoded.split("; ");
+      let value;
+      cArr.forEach(val => {
+        if (val.indexOf(name) === 0) value = val.substring(name.length);
+      })
+
+      return value;
+    }
+
+    document.querySelector("#accept-cookies").addEventListener("click", () => {
+      document.querySelector("#cookie-banner").style.display = "none";
+      setCookie("cookies_accepted", true, 365);
+      loadGoogleAnalytics();
+    })
+
+    cookieMessage = () => {
+      if (!getCookie("cookies_accepted"))
+        document.querySelector("#cookie-banner").style.display = "block";
+    }
+
+    window.addEventListener("load", cookieMessage);
+
+    // Load GA only after consent
+    function loadGoogleAnalytics() {
+      const script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-CDTSQCSBVM";
+      script.async = true;
+      document.head.appendChild(script);
+
+      script.onload = function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-CDTSQCSBVM');
+      };
+    }
+
+  </script>
+
+  <div id="menu_"></div>
+
+    <script type="module">
+      import { Menu_ } from './js/menu.js'
+
+      const container = document.getElementById('menu_');
+      container.innerHTML = Menu_;
+    </script>
+
+  <div class="relative">
+    <button popovertarget="desktop-menu-solutions" style="position: fixed; z-index: 2;" id="toggleScroll"
+      class="absolute top-0 left-1/2 transform -translate-x-1/2 inline-flex items-center gap-x-1 text-sm/60 font-semibold text-black text-[30px] my-8">
+      <span>
+        <div class="container" id="startMenuAnimation">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </span>
+    </button>
+
+     <script>
+      const btn = document.getElementById("toggleScroll");
+      const menu_btn = document.getElementById("startMenuAnimation")
+
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent document click from firing
+        if (document.body.style.overflow === "hidden") {
+          document.body.style.overflow = "auto";
+        } else {
+          document.body.style.overflow = "hidden";
+        };
+        menu_btn.classList.toggle("change");
+      });
+
+      document.addEventListener('click', function (event) {
+        if (document.body.style.overflow === "hidden") {
+          document.body.style.overflow = "auto";
+          menu_btn.classList.toggle("change");
+        }
+      });
+    </script>
+
+
+
+
+    <header class="p-6 bg-stone-900 shadow-md display" style="position: fixed; width: 100%; z-index: 1;">
+    <a href="index.html"><img src="assets\ico.png" alt="logo" style="float:right" width="50px" height="50px" class="header_icon"></a>
+    <h1 class="text-3xl font-bold"><a href="index.html">Ferlaty</a></h1>
+    <p class="text-gray-600">
+      <p class="text-gray-600"><div class="container">IT Automation Toolkit</p>
+    </header>
+
+    <div class="h-24"></div>
+
+    <div class="flex flex-col min-h-screen items-center justify-center banner_content relative text-center">
+      <h2 class="text-6xl font-bold mb-3">IT Automation Toolkit</h2>
+    <a href="#download"
+            class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition text-3xl">
+            <strong>Download</strong>
+          </a> 
+    </div>
+
+
+    <main class="flex-1 p-6 max-w-6xl mx-auto">
+      <section class="mb-8">
+        <h2 class="text-6xl font-semibold mb-3">Description:</h2>
+        <p class="leading-relaxed text-grey-300 text-2xl">
+          <br><b>Automation Toolkit is a small, user-friendly IT toolkit designed for:</b><br>
+
+          - Viewing detailed system information<br>
+
+          - Analysing log files<br>
+
+          - Generating secure passwords<br>
+
+          - Scanning your LAN (explicitly user-initiated)<br>
+
+          -Verifying, if a port is open on the system<br><br>
+
+          <b>Scanning<br></b>
+
+          - This network scanner uses raw ICMP for maximum speed. May trigger antivirus warnings
+          (Defender/SmartScreen).<br><br>
+
+          <b>Download Options<br></b>
+
+          - Portable (.zip)<br>
+
+          - Installer (.exe)<br><br>
+
+          <b>Security & Transparency<br></b>
+
+          - Scans are user-initiated only. No automatic actions.<br>
+
+          - VirusTotal reports are included for all builds.<br>
+
+          - No files are written or modified unless you explicitly choose a tool.<br><br>
+
+          <b>Donation<br></b>
+
+          - We currently do not receive donates, but plan in the future.<br><br>
+
+          <b>Support & Contact<br></b>
+
+          -For support, questions, or feedback, feel free to message us. Please allow 24–48 hours for a reply.<br><br>
+
+
+
+          Thank you for supporting IT Automation Toolkit! Your feedback helps improve features and keeps updates
+          coming.<br><br>
+
+          <i>Some pictures:</i><br>
+        </p>
+        <img src="assets/it_automation_toolkit01.png" alt="img01"
+          class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg"><br>
+        <img src="assets/it_automation_toolkit02.png" alt="img02"
+          class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg"><br>
+        <img src="assets/it_automation_toolkit03.png" alt="img03"
+          class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg"><br>
+        <img src="assets/it_automation_toolkit04.png" alt="img04"
+          class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg"><br>
+
+      </section>
+
+      <section class="grid gap-6 md:grid-cols-2" id="download">
+        <div class="p-6 bg-stone-900 rounded-xl shadow">
+          <h3 class="text-xl font-semibold mb-2">Download Installer</h3>
+          <p class="text-gray-400">Download the latest version of the installer(.exe). <a
+              href="https://www.virustotal.com/gui/file-analysis/YWU4ZDZkZWViNzliZDY2MGRmZmUwOWY3ODdjNDk5ZTM6MTc1OTQyMzg4OA==" class="hover:underline"><i>VirusTotal</i>
+              report for the executable.</a></p>
+          <a href="https://github.com/Ferlaty/it-automation-toolkit/releases/download/v1.0.0/it_automation_toolkit_installer.zip"
+            id="download_i"
+            class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition">
+            Download(25MB)
+          </a>
+        </div>
+
+        <div class="p-6 bg-stone-900 rounded-xl shadow">
+          <h3 class="text-xl font-semibold mb-2">Download Portable</h3>
+          <p class="text-gray-400">Download the latest version of the portable version(.zip). <a
+              href="https://www.virustotal.com/gui/file/4e3fa1c1cfd5eeec3f7ff70d83c81ab18c1dae6a4910daff95b1782c28d79a90?nocache=1" class="hover:underline"><i>VirusTotal</i>
+              report for the executable </a>and<a
+              href="https://www.virustotal.com/gui/file/d549f6f9c8db2a37343f1c8491c55ba02f2a459dabce2ae89319dcf415c006e4?nocache=1" class="hover:underline">
+              for the .zip file</a></p>
+          <a href="https://github.com/Ferlaty/it-automation-toolkit/releases/download/v1.0.0/it_automation_toolkit_portable.zip"
+            id="download_p" download="it_automation_toolkit_portable.zip"
+            class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition">
+            Download(27MB)
+          </a>
+        </div>
+      </section>
+    </main>
+
+  <div id="footer_"></div>
+
+    <script type="module">
+      import { Footer_ } from './js/footer.js'
+
+      const container = document.getElementById('footer_');
+      container.innerHTML = Footer_;
+    </script>
+</body>
+
+</html>

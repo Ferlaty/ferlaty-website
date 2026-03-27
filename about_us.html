@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" content="Ferlaty: About us page. We are a small brand from Slovakia.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferlaty | About us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.ico">
+  <link rel="stylesheet" href="css/menuanimation.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+
+
+<body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col min-w-full" id="body">
+
+   <a id="myBtn" title="Go to top" href="#"><svg width="50px" height="50px" viewBox="0 0 24 24">
+      <path
+        d="M18.2929 15.2893C18.6834 14.8988 18.6834 14.2656 18.2929 13.8751L13.4007 8.98766C12.6195 8.20726 11.3537 8.20757 10.5729 8.98835L5.68257 13.8787C5.29205 14.2692 5.29205 14.9024 5.68257 15.2929C6.0731 15.6835 6.70626 15.6835 7.09679 15.2929L11.2824 11.1073C11.673 10.7168 12.3061 10.7168 12.6966 11.1073L16.8787 15.2893C17.2692 15.6798 17.9024 15.6798 18.2929 15.2893Z"
+        fill="#FFFFFF" />
+    </svg></a>
+
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.classList.add("transition"); // Use .add, not .toggle
+      } else {
+        mybutton.classList.remove("transition");
+      }
+    }
+  </script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner"
+    style="position:fixed;bottom:0;width:100%;background:#010e14f5;color:#fefeff;padding:15px;text-align:center;display:none; z-index: 1;">
+    We use cookies to ensure you have the best experience on our website.
+    <a href="legal.html" class="text-blue-900 hover:underline">Read more</a>
+    <button id="accept-cookies" style="margin-left:10px;padding:5px 10px;"
+      class="inline-block m mt-0 px-10 py-2 bg-cyan-550 rounded-lg hover:bg-cyan-700 transition"><b>Accept</b></button>
+  </div>
+
+  <script>
+    setCookie = (cName, cValue, expDays) => {
+      let date = new Date();
+      date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+      const expires = "expires=" + date.toUTCString();
+      document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+    }
+
+    getCookie = (cName) => {
+      const name = cName + "=";
+      const cDecoded = decodeURIComponent(document.cookie);
+      const cArr = cDecoded.split("; ");
+      let value;
+      cArr.forEach(val => {
+        if (val.indexOf(name) === 0) value = val.substring(name.length);
+      })
+
+      return value;
+    }
+
+    document.querySelector("#accept-cookies").addEventListener("click", () => {
+      document.querySelector("#cookie-banner").style.display = "none";
+      setCookie("cookies_accepted", true, 365);
+      loadGoogleAnalytics();
+    })
+
+    cookieMessage = () => {
+      if (!getCookie("cookies_accepted"))
+        document.querySelector("#cookie-banner").style.display = "block";
+    }
+
+    window.addEventListener("load", cookieMessage);
+
+    // Load GA only after consent
+    function loadGoogleAnalytics() {
+      const script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-CDTSQCSBVM";
+      script.async = true;
+      document.head.appendChild(script);
+
+      script.onload = function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-CDTSQCSBVM');
+      };
+    }
+
+  </script>
+
+  <div class="relative">
+    <button popovertarget="desktop-menu-solutions" style="position: fixed; z-index: 2;" id="toggleScroll"
+      class="absolute top-0 left-1/2 transform -translate-x-1/2 inline-flex items-center gap-x-1 text-sm/60 font-semibold text-black text-[30px] my-8">
+      <span>
+        <div class="container" id="startMenuAnimation">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </span>
+    </button>
+
+     <script>
+      const btn = document.getElementById("toggleScroll");
+      const menu_btn = document.getElementById("startMenuAnimation")
+
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent document click from firing
+        if (document.body.style.overflow === "hidden") {
+          document.body.style.overflow = "auto";
+        } else {
+          document.body.style.overflow = "hidden";
+        };
+        menu_btn.classList.toggle("change");
+      });
+
+      document.addEventListener('click', function (event) {
+        if (document.body.style.overflow === "hidden") {
+          document.body.style.overflow = "auto";
+          menu_btn.classList.toggle("change");
+        }
+      });
+    </script>
+
+    <div id="menu_"></div>
+
+    <script type="module">
+      import { Menu_ } from './js/menu.js'
+
+      const container = document.getElementById('menu_');
+      container.innerHTML = Menu_;
+    </script>
+
+  <header class="p-6 bg-stone-900 shadow-md display" style="position: fixed; width: 100%; z-index: 1;">
+    <a href="index.html"><img src="assets\ico.png" alt="logo" style="float:right" width="50px" height="50px" class="header_icon"></a>
+    <h1 class="text-3xl font-bold"><a href="index.html">Ferlaty</a></h1>
+    <p class="text-gray-600">
+    <div class="container">About us</p>
+  </header>
+
+  <div class="h-24"></div>
+
+  <div class="flex flex-col min-h-screen items-center justify-center about_us_banner relative text-center">
+    <h2 class="text-6xl font-bold mb-3">Who are we?</h2>
+      <h2 class="text-2xl font-semibold mb-3">We create applications, mods for games, videos and much more.<br></h2>
+      <h2 class="text-4xl font-bold mb-3"><br>Location:</h2>
+      <h2 class="text-xl font-semibold mb-3">Slovakia, Europe.</h2>
+    </div>
+  </div>
+
+  <main class="flex-1 p-6 max-w-6xl mx-auto">
+    <section class="mb-8">
+      <h2 class="text-4xl font-bold mb-3"><br>History</h2>
+      <h2 class="text-xl font-semibold mb-3">All started with <a href="https://www.youtube.com/@Ferlaty"
+          class="text-blue-700 hover:underline">our YouTube channel</a> named "Italy studio" which was created on 8th of
+        February 2024.
+        Our first video was uploaded on 23rd of March 2024. It was an instant success. Later we made our first long
+        format video named <a href="https://www.youtube.com/watch?v=FByJ1G1xqQc"
+          class="text-blue-700 hover:underline">F1 Edit: Pohoda-Sám Sebou | Italy studio</a>.
+        Big improvements in video quality came after participating in an edit competition of another editor. We finished
+        almost last, but learnt from it, didn't give up.
+        Right after this we rebranded our channel to "Ferlaty" for some reason. After this, we rapidly increased the
+        quality of our edits and on 25th of April 2025 we released our edit named <a
+          href="https://www.youtube.com/watch?v=CBNJoNFTvt4" class="text-blue-700 hover:underline">Sebastian Vettel –
+          Viva La Vida | A Tribute (2008–2022) | F1 Edit</a>.
+        Later that year we started our GitHub and Racedepartment accounts, where we started to upload content. In
+        September of 2025 we started developing our destkop applications. And in October of 2025 we launched this
+        website.</h2>
+      <h2 class="text-4xl font-bold mb-3"><br>Content</h2>
+      <h2 class="text-xl font-semibold mb-3">What type of content we make?<br>
+        We make videos, destkop apps, websites, track for Assetto Corsa, Android apps and others.</h2>
+      </div>
+    </section>
+  </main>
+
+   <div id="footer_"></div>
+
+    <script type="module">
+      import { Footer_ } from './js/footer.js'
+
+      const container = document.getElementById('footer_');
+      container.innerHTML = Footer_;
+    </script>
+</body>
+
+</html>

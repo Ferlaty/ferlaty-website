@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"
+    content="Ferlaty: Home page. Content creation: from all across videos on YT to own applications.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:site_name" content="Ferlaty">
+  <title>Ferlaty</title>
+  <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "Ferlaty",
+      "alternateName" : "FER",
+      "url" : "https://ferlaty.netlify.app/"
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.ico">
+  <link rel="stylesheet" href="css/menuanimation.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+
+
+<body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col min-w-full" id="body">
+
+  <a id="myBtn" title="Go to top" href="#"><svg width="50px" height="50px" viewBox="0 0 24 24">
+      <path
+        d="M18.2929 15.2893C18.6834 14.8988 18.6834 14.2656 18.2929 13.8751L13.4007 8.98766C12.6195 8.20726 11.3537 8.20757 10.5729 8.98835L5.68257 13.8787C5.29205 14.2692 5.29205 14.9024 5.68257 15.2929C6.0731 15.6835 6.70626 15.6835 7.09679 15.2929L11.2824 11.1073C11.673 10.7168 12.3061 10.7168 12.6966 11.1073L16.8787 15.2893C17.2692 15.6798 17.9024 15.6798 18.2929 15.2893Z"
+        fill="#FFFFFF" />
+    </svg></a>
+
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.classList.add("transition"); // Use .add, not .toggle
+      } else {
+        mybutton.classList.remove("transition");
+      }
+    }
+  </script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner"
+    style="position:fixed;bottom:0;width:100%;background:#010e14f5;color:#fefeff;padding:15px;text-align:center;display:none; z-index: 1;">
+    We use cookies to ensure you have the best experience on our website.
+    <a href="legal.html" class="text-blue-900 hover:underline">Read more</a>
+    <button id="accept-cookies" style="margin-left:10px;padding:5px 10px;"
+      class="inline-block m mt-0 px-10 py-2 bg-cyan-550 rounded-lg hover:bg-cyan-900 transition"><b>Accept</b></button>
+  </div>
+
+  <script>
+    setCookie = (cName, cValue, expDays) => {
+      let date = new Date();
+      date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+      const expires = "expires=" + date.toUTCString();
+      document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+    }
+
+    getCookie = (cName) => {
+      const name = cName + "=";
+      const cDecoded = decodeURIComponent(document.cookie);
+      const cArr = cDecoded.split("; ");
+      let value;
+      cArr.forEach(val => {
+        if (val.indexOf(name) === 0) value = val.substring(name.length);
+      })
+
+      return value;
+    }
+
+    document.querySelector("#accept-cookies").addEventListener("click", () => {
+      document.querySelector("#cookie-banner").style.display = "none";
+      setCookie("cookies_accepted", true, 365);
+      loadGoogleAnalytics();
+    })
+
+    cookieMessage = () => {
+      if (!getCookie("cookies_accepted"))
+        document.querySelector("#cookie-banner").style.display = "block";
+    }
+
+    window.addEventListener("load", cookieMessage);
+
+    // Load GA only after consent
+    function loadGoogleAnalytics() {
+      const script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-CDTSQCSBVM";
+      script.async = true;
+      document.head.appendChild(script);
+
+      script.onload = function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-CDTSQCSBVM');
+      };
+    }
+
+  </script>
+
+  <div class="relative">
+    <button popovertarget="desktop-menu-solutions" style="position: fixed; z-index: 2;" id="toggleScroll"
+      class="absolute top-0 left-1/2 transform -translate-x-1/2 inline-flex items-center gap-x-1 text-sm/60 font-semibold text-black text-[30px] my-8">
+      <span>
+        <div class="container" id="startMenuAnimation">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </span>
+    </button>
+
+    <script>
+      const btn = document.getElementById("toggleScroll");
+      const menu_btn = document.getElementById("startMenuAnimation")
+
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent document click from firing
+        if (document.body.style.overflow === "hidden") {
+          document.body.style.overflow = "auto";
+        } else {
+          document.body.style.overflow = "hidden";
+        };
+        menu_btn.classList.toggle("change");
+      });
+
+      document.addEventListener('click', function (event) {
+        if (document.body.style.overflow === "hidden") {
+          document.body.style.overflow = "auto";
+          menu_btn.classList.toggle("change");
+        }
+      });
+    </script>
+
+    <div id="menu_"></div>
+
+    <script type="module">
+      import { Menu_ } from './js/menu.js'
+
+      const container = document.getElementById('menu_');
+      container.innerHTML = Menu_;
+    </script>
+
+  <header class="p-6 bg-stone-900 shadow-md display" style="position: fixed; width: 100%; z-index: 1;">
+    <a href="index.html"><img src="assets\ico.png" alt="logo" style="float:right" width="50px" height="50px" class="header_icon"></a>
+    <h1 class="text-3xl font-bold"><a href="index.html">Ferlaty</a></h1>
+    <p class="text-gray-600">
+    <div class="container">Content Creation</p>
+  </header>
+
+
+    <main class="flex-1">
+  <div class="flex flex-col min-h-screen items-center justify-center main_banner relative text-center">
+    <h2 class="text-8xl font-bold mb-3 text-center text-white">Content creation</h2><br>
+    <h2 class="text-2xl font-semibold mb-3  hover:underline text-center text-white"><a href="about_us.html">We create
+        digital
+        content, like games, apps, videos, 3D assests...</a></h2><br>
+    <div class="justify-between">
+      <a href="#apps_content"
+        class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition">
+        Apps</a>
+      <a href="#gamemods_content"
+        class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition">
+        Game mods</a>
+    </div>
+  </div>
+
+
+    <div class="p-6 max-w-6xl mx-auto min-h-screen">
+      <section class="mb-8">
+        <h2 class="text-6xl font-bold mb-3 hover:underline" id="apps_content">
+          <div class="h-24"></div>
+          <a href="content.html">Our
+            applications:</a></h2><br>
+        <h2 class="text-5xl font-semibold mb-3 hover:text-blue-700 hover:underline"><a
+            href="multiple_app_launcher.html">Multiple App Launcher</a>
+        </h2>
+        <a href="multiple_app_launcher.html"><img src="assets/multiple_app_launcher.png"
+            alt="multiple_app_launcher_cover" class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg"
+            style="width: 90%; height: 35%;"></a><br>
+        <div class="flex w-full items-center justify-between">
+          <p class="leading-relaxed text-grey-300 text-lg"><br>A lightweight and portable app launcher with a simple
+            settings executable.</p> <a href="multiple_app_launcher.html"
+            class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition">
+            Download</a>
+        </div>
+        <h2 class="text-5xl font-semibold mb-3 hover:text-blue-700 hover:underline"><a
+            href="it_automation_toolkit.html"><br><br>IT Automation Toolkit</a></h2>
+        <a href="it_automation_toolkit.html"><img src="assets/IT_AUTOMATION_TOOLKIT_COVER.jpg"
+            alt="it_automation_toolkit_cover" class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg"
+            style="width:90%; height: 55%;"></a><br>
+        <div class="flex w-full items-center justify-between">
+          <p class="leading-relaxed text-grey-300 text-lg"><br>An IT toolkit with varius tools for your needs.</p> <a
+            href="it_automation_toolkit.html"
+            class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition">
+            Download</a>
+        </div>
+    </div>
+    <div class="flex flex-col min-h-screen items-center justify-center patreon_banner relative">
+      <h2 class="text-5xl font-semibold mb-3"><a href="https://www.patreon.com/cw/Ferlaty"><br><br>Our Patreon</a>
+      </h2>
+      <p class="leading-relaxed text-grey-300 text-lg"><br>Exclusive content</p><br>
+      <a href="https://www.patreon.com/cw/Ferlaty"
+        class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition">
+        Go to our Patreon</a>
+    </div>
+    <div class="p-6 max-w-7xl mx-auto min-h-screen">
+      <h2 class="text-5xl font-semibold mb-3 hover:text-blue-700 hover:underline"><a
+          href="https://www.youtube.com/@Ferlaty"><br><br>YouTube channel</a>
+      </h2>
+      <p class="leading-relaxed text-grey-300 text-2xl font-semibold">Mainly F1 edits<br></p>
+      <div class="relative w-full max-w-6xl mx-auto aspect-video">
+        <iframe width="100%" height="100%"
+          class="absolute top-0 left-0 w-full h-full rounded-lg shadow-[0_15px_30px_rgba(0,0,0,0.6)]"
+          src="https://www.youtube.com/embed/cTDlrWbwXrE?si=UAsGSgrQZLwTxiO6" allowfullscreen>
+        </iframe>
+      </div>
+      <p class="leading-relaxed text-grey-300 text-md"><br>The current flagship edit about Max Verstappen.</p>
+    </div>
+    </div>
+    <div class="flex flex-col min-h-screen items-center justify-center game_mods_banner relative">
+      <h2 class="text-7xl font-semibold mb-3 text-center" id="gamemods_content"><br><br><a href="content.html">Assetto Corsa mods</a>
+      </h2><br>
+      <a href="#ac_mods">
+        <svg width="200px" height="200px" viewBox="0 0 24 24" fill="white" stroke="none">
+          <path
+            d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+            fill="#FFFFFFF" />
+        </svg>
+      </a>
+    </div>
+    <div class="p-6 max-w-6xl mx-auto min-h-screen" id="ac_mods">
+      <div class="h-24"></div>
+      <h2 class="text-5xl font-semibold mb-3 hover:text-blue-700 hover:underline"><a
+                    href="https://www.patreon.com/posts/new-gui-preview-149430634">New GUI</a></h2>
+      <div class="h-12"></div>
+      <a href="https://www.overtake.gg/downloads/new-gui-for-ac.82780/"><img src="assets/New_GUI_for_AC_icon.png"
+          alt="New_GUI_for_AC_icon" class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg"
+          style="width: 70%; height: 15%;"></a><br>
+      <div class="flex w-full items-center justify-between">
+        <p class="leading-relaxed text-grey-300 text-lg"><br>New GUI for Assetto Corsa full version 1.0 is out!
+          Go and check it! </p><a href="https://www.patreon.com/cw/Ferlaty"
+          class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition">
+          Support development</a>
+      </div>
+      <div class="h-24"></div>
+      <p class="leading-relaxed text-grey-300 text-2xl font-semibold"><a
+          href="https://www.overtake.gg/members/italy-studio.3541341/">Check out our OverTake account!</a><br></p><br>
+      <a href="https://www.overtake.gg/downloads/ve%C4%BEk%C3%BD-hore%C5%A1-circuit.81286/"><img
+          src="assets/velky_hores_circuit_thumbnail.png" alt="Velky Hores circuit banner"
+          class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg" style="width: 90%; height: 55%;"></a>
+      <p class="leading-relaxed text-grey-300 text-md"><br>The newest Veľký Horeš circuit with 5 layouts including free
+        roam and rally for Assetto Corsa.</p>
+    </div>
+    </div>
+    <div class="flex flex-col min-h-screen items-center justify-center bg_img_01 relative">
+      <h2 class="text-5xl font-semibold mb-3 text-center"><br><br>Found some glitch, bug or have other reason to reach out to us?
+      </h2>
+      <p class="leading-relaxed text-gray-300 text-2xl font-semibold text-center">No problem!<br> Just <a href="contact_us.html"
+          class="text-blue-700 hover:underline text-center">head to our "contact us" form and send a message.</a> <br>
+      <p class="leading-relaxed text-gray-300 text-2xl font-bold text-center">We are open for your feedback!</p>
+      </p>
+    </div>
+    </div>
+    </section>
+  </main>
+
+  <div id="footer_"></div>
+
+    <script type="module">
+      import { Footer_ } from './js/footer.js'
+
+      const container = document.getElementById('footer_');
+      container.innerHTML = Footer_;
+    </script>
+</body>
+
+</html>

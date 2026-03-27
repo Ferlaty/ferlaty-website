@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" content="Contact us! Ferlaty">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferlaty | Contact us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.ico">
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init({
+        publicKey: "jJG8EzxCrnelPjuPN",
+      });
+    })();
+  </script>
+  <link rel="stylesheet" href="css/menuanimation.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col min-w-full">
+
+   <a id="myBtn" title="Go to top" href="#"><svg width="50px" height="50px" viewBox="0 0 24 24">
+      <path
+        d="M18.2929 15.2893C18.6834 14.8988 18.6834 14.2656 18.2929 13.8751L13.4007 8.98766C12.6195 8.20726 11.3537 8.20757 10.5729 8.98835L5.68257 13.8787C5.29205 14.2692 5.29205 14.9024 5.68257 15.2929C6.0731 15.6835 6.70626 15.6835 7.09679 15.2929L11.2824 11.1073C11.673 10.7168 12.3061 10.7168 12.6966 11.1073L16.8787 15.2893C17.2692 15.6798 17.9024 15.6798 18.2929 15.2893Z"
+        fill="#FFFFFF" />
+    </svg></a>
+
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.classList.add("transition"); // Use .add, not .toggle
+      } else {
+        mybutton.classList.remove("transition");
+      }
+    }
+  </script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner"
+    style="position:fixed;bottom:0;width:100%;background:#010e14f5;color:#fefeff;padding:15px;text-align:center;display:none; z-index: 1;">
+    We use cookies to ensure you have the best experience on our website.
+    <a href="legal.html" class="text-blue-900 hover:underline">Read more</a>
+    <button id="accept-cookies" style="margin-left:10px;padding:5px 10px;"
+      class="inline-block m mt-0 px-10 py-2 bg-cyan-550 rounded-lg hover:bg-cyan-700 transition"><b>Accept</b></button>
+  </div>
+
+  <script>
+    setCookie = (cName, cValue, expDays) => {
+      let date = new Date();
+      date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+      const expires = "expires=" + date.toUTCString();
+      document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+    }
+
+    getCookie = (cName) => {
+      const name = cName + "=";
+      const cDecoded = decodeURIComponent(document.cookie);
+      const cArr = cDecoded.split("; ");
+      let value;
+      cArr.forEach(val => {
+        if (val.indexOf(name) === 0) value = val.substring(name.length);
+      })
+
+      return value;
+    }
+
+    document.querySelector("#accept-cookies").addEventListener("click", () => {
+      document.querySelector("#cookie-banner").style.display = "none";
+      setCookie("cookies_accepted", true, 365);
+      loadGoogleAnalytics();
+    })
+
+    cookieMessage = () => {
+      if (!getCookie("cookies_accepted"))
+        document.querySelector("#cookie-banner").style.display = "block";
+    }
+
+    window.addEventListener("load", cookieMessage);
+
+    // Load GA only after consent
+    function loadGoogleAnalytics() {
+      const script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-CDTSQCSBVM";
+      script.async = true;
+      document.head.appendChild(script);
+
+      script.onload = function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-CDTSQCSBVM');
+      };
+    }
+
+  </script>
+
+  <div class="relative">
+    <button popovertarget="desktop-menu-solutions" style="position: fixed; z-index: 2;" id="toggleScroll"
+      class="absolute top-0 left-1/2 transform -translate-x-1/2 inline-flex items-center gap-x-1 text-sm/60 font-semibold text-black text-[30px] my-8">
+      <span>
+        <div class="container" id="startMenuAnimation">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </span>
+    </button>
+
+     <script>
+      const btn = document.getElementById("toggleScroll");
+      const menu_btn = document.getElementById("startMenuAnimation")
+
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent document click from firing
+        if (document.body.style.overflow === "hidden") {
+          document.body.style.overflow = "auto";
+        } else {
+          document.body.style.overflow = "hidden";
+        };
+        menu_btn.classList.toggle("change");
+      });
+
+      document.addEventListener('click', function (event) {
+        if (document.body.style.overflow === "hidden") {
+          document.body.style.overflow = "auto";
+          menu_btn.classList.toggle("change");
+        }
+      });
+    </script>
+
+   <div id="menu_"></div>
+
+    <script type="module">
+      import { Menu_ } from './js/menu.js'
+
+      const container = document.getElementById('menu_');
+      container.innerHTML = Menu_;
+    </script>
+
+
+  <header class="p-6 bg-stone-900 shadow-md display" style="position: fixed; width: 100%; z-index: 1;">
+    <a href="index.html"><img src="assets\ico.png" alt="logo" style="float:right" width="50px" height="50px" class="header_icon"></a>
+    <h1 class="text-3xl font-bold"><a href="index.html">Ferlaty</a></h1>
+    <p class="text-gray-600">
+    <div class="container">Contact us</p>
+  </header>
+
+  <main class="flex-1 p-6 max-w-6xl mx-auto">
+    <div class="h-24"></div>
+
+    <section class="contact-section">
+      <div class="contact-intro">
+        <h2 class="contact-title text-6xl font-bold">Contact us<br></h2>
+        <p class="contact-description text-xl">
+          <br>Fill out the form below and we will get back to you as soon as possible.
+        </p>
+      </div>
+
+      <form class="contact-form" id="contact-form1">
+
+        <div class="form-group-container">
+          <div class="form-group">
+            <label for="name" class="form-label text-2xl font-semibold"><br>Name</label>
+            <input id="name" name="name" class="form-input border-black p-2 rounded w-full bg-stone-900" placeholder="Your name"
+              type="text" />
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label text-2xl font-semibold">E-mail</label>
+            <input id="email" name="email" class="form-input border-black p-2 rounded w-full bg-stone-900" placeholder="Your e-mail"
+              type="email" />
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label text-2xl font-semibold">Message</label>
+            <textarea class="form-textarea border-black p-2 rounded w-full bg-stone-900" id="message" name="message"
+              placeholder="Your message"></textarea>
+          </div>
+        </div>
+        <button class="form-submit inline-block mt-4 px-6 py-3 bg-cyan-600 text-white font-semibold rounded-lg
+           shadow-lg hover:bg-cyan-700 hover:shadow-xl transform hover:scale-105
+           transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
+          type="submit">Send Message</button>
+      </form><br>
+
+      <div class="flex items-center justify-between p-4 mb-4 text-green-800 bg-green-100 rounded-lg shadow-md"
+        role="alert" style="display: none;" id="success">
+        <span class="font-medium">Message sent successfully! We will  reply as soon as we can.</span>
+        <button type="button" class="ml-4 text-black-800 hover:text-black-900" id="success_btn">
+          ✕
+        </button>
+      </div>
+      <div class="flex items-center justify-between p-4 mb-4 text-red-800 bg-red-500 rounded-lg shadow-md" role="alert"
+        style="display: none;" id="fail">
+        <span class="font-medium">Error! Something went wrong.</span>
+        <button type="button" class="ml-4 text-black-800 hover:text-black-900" id="fail_btn">
+          ✕
+        </button>
+      </div>
+      <div class="flex items-center justify-between p-4 mb-4 text-red-800 bg-red-100 rounded-lg shadow-md" role="alert"
+        style="display: none;" id="blank">
+        <span class="font-medium">Please, fill out every field.</span>
+        <button type="button" class="ml-4 text-black hover:text-black-900" id="blank_btn">
+          ✕
+        </button>
+      </div>
+
+    </section>
+  </main>
+  <script type="text/javascript">
+    window.onload = function () {
+      document.getElementById('contact-form1').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+          document.getElementById('blank').style.display = 'flex'; // show error
+          return; // stop submission
+        }
+
+        // these IDs from the previous steps
+        emailjs.sendForm('service_0dwc2tr', 'template_5vcrw25', this)
+          .then(() => {
+            console.log('SUCCESS!');
+            document.getElementById('success').style.display = 'flex';
+            document.getElementById("contact-form1").reset();
+          }, (error) => {
+            console.log('FAILED...', error);
+            document.getElementById('fail').style.display = 'flex';
+          });
+      });
+    }
+  </script>
+  <script>
+    document.getElementById("success_btn").addEventListener('click', function () {
+      document.getElementById("success").style.display = 'none';
+    });
+    document.getElementById("fail_btn").addEventListener('click', function () {
+      document.getElementById("fail").style.display = 'none';
+    });
+    document.getElementById("blank_btn").addEventListener('click', function () {
+      document.getElementById("blank").style.display = 'none';
+    });
+  </script>
+
+
+<div id="footer_"></div>
+
+    <script type="module">
+      import { Footer_ } from './js/footer.js'
+
+      const container = document.getElementById('footer_');
+      container.innerHTML = Footer_;
+    </script>
+</body>
+
+</html>

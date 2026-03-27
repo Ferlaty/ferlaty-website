@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" content="Ferlaty: Social media page. Our social media accounts.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferlaty | Social media</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.ico">
+  <link rel="stylesheet" href="css/menuanimation.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+
+
+<body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col min-w-full" id="body">
+
+  <a id="myBtn" title="Go to top" href="#"><svg width="50px" height="50px" viewBox="0 0 24 24">
+      <path
+        d="M18.2929 15.2893C18.6834 14.8988 18.6834 14.2656 18.2929 13.8751L13.4007 8.98766C12.6195 8.20726 11.3537 8.20757 10.5729 8.98835L5.68257 13.8787C5.29205 14.2692 5.29205 14.9024 5.68257 15.2929C6.0731 15.6835 6.70626 15.6835 7.09679 15.2929L11.2824 11.1073C11.673 10.7168 12.3061 10.7168 12.6966 11.1073L16.8787 15.2893C17.2692 15.6798 17.9024 15.6798 18.2929 15.2893Z"
+        fill="#FFFFFF" />
+    </svg></a>
+
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.classList.add("transition"); // Use .add, not .toggle
+      } else {
+        mybutton.classList.remove("transition");
+      }
+    }
+  </script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner"
+    style="position:fixed;bottom:0;width:100%;background:#010e14f5;color:#fefeff;padding:15px;text-align:center;display:none; z-index: 1;">
+    We use cookies to ensure you have the best experience on our website.
+    <a href="legal.html" class="text-blue-900 hover:underline">Read more</a>
+    <button id="accept-cookies" style="margin-left:10px;padding:5px 10px;"
+      class="inline-block m mt-0 px-10 py-2 bg-cyan-550 rounded-lg hover:bg-cyan-700 transition"><b>Accept</b></button>
+  </div>
+
+  <script>
+    setCookie = (cName, cValue, expDays) => {
+      let date = new Date();
+      date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+      const expires = "expires=" + date.toUTCString();
+      document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+    }
+
+    getCookie = (cName) => {
+      const name = cName + "=";
+      const cDecoded = decodeURIComponent(document.cookie);
+      const cArr = cDecoded.split("; ");
+      let value;
+      cArr.forEach(val => {
+        if (val.indexOf(name) === 0) value = val.substring(name.length);
+      })
+
+      return value;
+    }
+
+    document.querySelector("#accept-cookies").addEventListener("click", () => {
+      document.querySelector("#cookie-banner").style.display = "none";
+      setCookie("cookies_accepted", true, 365);
+      loadGoogleAnalytics();
+    })
+
+    cookieMessage = () => {
+      if (!getCookie("cookies_accepted"))
+        document.querySelector("#cookie-banner").style.display = "block";
+    }
+
+    window.addEventListener("load", cookieMessage);
+
+    // Load GA only after consent
+    function loadGoogleAnalytics() {
+      const script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-CDTSQCSBVM";
+      script.async = true;
+      document.head.appendChild(script);
+
+      script.onload = function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-CDTSQCSBVM');
+      };
+    }
+
+  </script>
+
+  <!--Menu button-->
+  <div class="relative">
+    <button popovertarget="desktop-menu-solutions" style="position: fixed; z-index: 2;" id="toggleScroll"
+      class="absolute top-0 left-1/2 transform -translate-x-1/2 inline-flex items-center gap-x-1 text-sm/60 font-semibold text-black text-[30px] my-8">
+      <span>
+        <div class="container" id="startMenuAnimation">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </span>
+    </button>
+
+    <div id="menu_"></div>
+
+    <script type="module">
+      import { Menu_ } from './js/menu.js'
+
+      const container = document.getElementById('menu_');
+      container.innerHTML = Menu_;
+    </script>
+
+    <script>
+      const btn = document.getElementById("toggleScroll");
+      const menu_btn = document.getElementById("startMenuAnimation")
+
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent document click from firing
+        if (document.body.style.overflow === "hidden") {
+          document.body.style.overflow = "auto";
+        } else {
+          document.body.style.overflow = "hidden";
+        };
+        menu_btn.classList.toggle("change");
+      });
+
+      document.addEventListener('click', function (event) {
+        if (document.body.style.overflow === "hidden") {
+          document.body.style.overflow = "auto";
+          menu_btn.classList.toggle("change");
+        }
+      });
+    </script>
+
+
+    <header class="p-6 bg-stone-900 shadow-md display" style="position: fixed; width: 100%; z-index: 1;">
+      <a href="index.html"><img src="assets\ico.png" alt="logo" style="float:right" width="50px" height="50px"
+          class="header_icon"></a>
+      <h1 class="text-3xl font-bold"><a href="index.html">Ferlaty</a></h1>
+      <p class="text-gray-600">
+      <div class="container">Social Media</p>
+    </header>
+
+    <div class="h-24"></div>
+
+    <div class="flex flex-col min-h-screen items-center justify-center bg_img_02 relative text-center">
+      <h2 class="text-8xl font-bold mb-3">Social Media</h2>
+      <h2 class="text-6xl font-bold mb-3"><br>Our social media accounts:</h2>
+      <h2 class="text-4xl font-semibold mb-3">Tiktok: <a href="https://www.tiktok.com/@ferlaty"
+          class="text-blue-700 hover:underline">@ferlaty</a><br>
+        YouTube: <a href="https://www.youtube.com/@Ferlaty" class="text-blue-700 hover:underline">@Ferlaty</a></h2>
+      <a href="#socialMedia">
+        <svg width="200px" height="200px" viewBox="0 0 24 24" fill="white" stroke="none">
+          <path
+            d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+            fill="#FFFFFFF" />
+        </svg>
+    </div>
+  </div>
+
+  <main class="flex-1">
+    <div class=" p-6 max-w-6xl mx-auto min-h-screen">
+      <section class="mb-8" id="socialMedia">
+        <div class="h-24"></div>
+        <h2 class="text-6xl font-bold mb-3">YouTube</h2>
+        <div class="h-12"></div>
+        <h2 class="text-3xl mb-3">
+          We make primarly short F1 edits. But sometimes also make a long format edit. And from time to time you can
+          also find some hotlaps in Assetto Corsa.<br>
+          <br><b>Our flagship edit right now:</b>
+        </h2>
+        <div class="h-12"></div>
+        <div class="relative w-full max-w-4xl mx-auto aspect-video">
+          <iframe width="100%" height="100%"
+            class="absolute top-0 left-0 w-full h-full rounded-lg shadow-[0_15px_30px_rgba(0,0,0,0.6)]"
+            src="https://www.youtube.com/embed/cTDlrWbwXrE?si=UAsGSgrQZLwTxiO6" allowfullscreen>
+          </iframe>
+        </div><br>
+        <div class="h-24"></div>
+
+        <h2 class="text-4xl font-semibold mb-3">Another successfull video is:</h2>
+        <div class="h-12"></div>
+        <div class="relative w-full max-w-4xl mx-auto aspect-video">
+          <iframe width="100%" height="100%"
+            class="absolute top-0 left-0 w-full h-full rounded-lg shadow-[0_15px_30px_rgba(0,0,0,0.6)]"
+            src="https://www.youtube.com/embed/CBNJoNFTvt4?si=YcGnbqq4dSG7C2V6" allowfullscreen>
+          </iframe>
+        </div><br>
+        <div class="h-24"></div>
+
+        <h2 class="text-4xl font-semibold mb-3">Example of an Assetto Corsa hotlap:</h2>
+        <div class="h-12"></div>
+        <div class="relative w-full max-w-4xl mx-auto aspect-video">
+          <iframe width="100%" height="100%"
+            class="absolute top-0 left-0 w-full h-full rounded-lg shadow-[0_15px_30px_rgba(0,0,0,0.6)]"
+            src="https://www.youtube.com/embed/MehMGMBTcGk?si=fl40wPZHb1-AVpbT" allowfullscreen>
+          </iframe>
+        </div><br>
+        <div class="h-24"></div>
+
+        <h2 class="text-4xl font-semibold mb-3">A 17 minute film made in Assetto Corsa:</h2>
+        <div class="h-12"></div>
+        <div class="relative w-full max-w-4xl mx-auto aspect-video">
+          <iframe width="100%" height="100%"
+            class="absolute top-0 left-0 w-full h-full rounded-lg shadow-[0_15px_30px_rgba(0,0,0,0.6)]"
+            src="https://www.youtube.com/embed/ATPPPUDh4hs?si=-oJUU1Z6MB8rZzEe" allowfullscreen>
+          </iframe>
+        </div><br>
+      </section>
+    </div>
+    <div class="flex flex-col min-h-screen items-center justify-center bg_img_01 relative">
+      <h2 class="text-5xl font-semibold mb-3 text-center"><br><br>Find more on <a
+          href="https://www.youtube.com/@Ferlaty" class="hover:underline hover:text-blue-700">our YouTube channel.</a>
+      </h2>
+    </div>
+  </main>
+
+  <div class="h-12"></div>
+
+  <div id="footer_"></div>
+
+    <script type="module">
+      import { Footer_ } from './js/footer.js'
+
+      const container = document.getElementById('footer_');
+      container.innerHTML = Footer_;
+    </script>
+  
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" content="Ferlaty: legal">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferlaty | Legal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="favicon.ico">
+  <link rel="stylesheet" href="css/menuanimation.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col min-w-full">
+
+   <a id="myBtn" title="Go to top" href="#"><svg width="50px" height="50px" viewBox="0 0 24 24">
+      <path
+        d="M18.2929 15.2893C18.6834 14.8988 18.6834 14.2656 18.2929 13.8751L13.4007 8.98766C12.6195 8.20726 11.3537 8.20757 10.5729 8.98835L5.68257 13.8787C5.29205 14.2692 5.29205 14.9024 5.68257 15.2929C6.0731 15.6835 6.70626 15.6835 7.09679 15.2929L11.2824 11.1073C11.673 10.7168 12.3061 10.7168 12.6966 11.1073L16.8787 15.2893C17.2692 15.6798 17.9024 15.6798 18.2929 15.2893Z"
+        fill="#FFFFFF" />
+    </svg></a>
+
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.classList.add("transition"); // Use .add, not .toggle
+      } else {
+        mybutton.classList.remove("transition");
+      }
+    }
+  </script>
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner"
+    style="position:fixed;bottom:0;width:100%;background:#010e14f5;color:#fefeff;padding:15px;text-align:center;display:none; z-index: 1;">
+    We use cookies to ensure you have the best experience on our website.
+    <a href="legal.html" class="text-blue-900 hover:underline">Read more</a>
+    <button id="accept-cookies" style="margin-left:10px;padding:5px 10px;"
+      class="inline-block m mt-0 px-10 py-2 bg-cyan-550 rounded-lg hover:bg-cyan-700 transition"><b>Accept</b></button>
+  </div>
+
+  <script>
+    setCookie = (cName, cValue, expDays) => {
+      let date = new Date();
+      date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+      const expires = "expires=" + date.toUTCString();
+      document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+    }
+
+    getCookie = (cName) => {
+      const name = cName + "=";
+      const cDecoded = decodeURIComponent(document.cookie);
+      const cArr = cDecoded.split("; ");
+      let value;
+      cArr.forEach(val => {
+        if (val.indexOf(name) === 0) value = val.substring(name.length);
+      })
+
+      return value;
+    }
+
+    document.querySelector("#accept-cookies").addEventListener("click", () => {
+      document.querySelector("#cookie-banner").style.display = "none";
+      setCookie("cookies_accepted", true, 365);
+      loadGoogleAnalytics();
+    })
+
+    cookieMessage = () => {
+      if (!getCookie("cookies_accepted"))
+        document.querySelector("#cookie-banner").style.display = "block";
+    }
+
+    window.addEventListener("load", cookieMessage);
+
+    // Load GA only after consent
+    function loadGoogleAnalytics() {
+      const script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-CDTSQCSBVM";
+      script.async = true;
+      document.head.appendChild(script);
+
+      script.onload = function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-CDTSQCSBVM');
+      };
+    }
+
+  </script>
+
+  <button popovertarget="desktop-menu-solutions" style="position: fixed; z-index: 2;" id="toggleScroll"
+    class="absolute top-0 left-1/2 transform -translate-x-1/2 inline-flex items-center gap-x-1 text-sm/60 font-semibold text-black text-[30px] my-8">
+    <span>
+      <div class="container" id="startMenuAnimation">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </span>
+  </button>
+
+  <script>
+    const btn = document.getElementById("toggleScroll");
+    const menu_btn = document.getElementById("startMenuAnimation")
+
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation(); // prevent document click from firing
+      if (document.body.style.overflow === "hidden") {
+        document.body.style.overflow = "auto";
+      } else {
+        document.body.style.overflow = "hidden";
+      };
+      menu_btn.classList.toggle("change");
+    });
+
+    document.addEventListener('click', function (event) {
+      if (document.body.style.overflow === "hidden") {
+        document.body.style.overflow = "auto";
+        menu_btn.classList.toggle("change");
+      }
+    });
+  </script>
+
+  <div id="menu_"></div>
+
+    <script type="module">
+      import { Menu_ } from './js/menu.js'
+
+      const container = document.getElementById('menu_');
+      container.innerHTML = Menu_;
+    </script>
+
+  <header class="p-6 bg-stone-900 shadow-md display" style="position: fixed; width: 100%; z-index: 1;">
+    <a href="index.html"><img src="assets\ico.png" alt="logo" style="float:right" width="50px" height="50px" class="header_icon"></a>
+    <h1 class="text-3xl font-bold"><a href="index.html">Ferlaty</a></h1>
+    <p class="text-gray-600">
+    <div class="container">Legal</p>
+  </header>
+
+  <main class="flex-1 p-6 max-w-6xl mx-auto">
+    <div class="h-24"></div>
+    <section class="mb-8">
+      <h2 class="text-6xl font-bold mb-3"><a href="about_us.html">Legal Notice</a></h2><br>
+      <h2 class="text-2xl font-semibold mb-3"> © 2026 Ferlaty. All rights reserved. This website is owned and maintained
+        by Ferlaty.<br></h2>
+      <h2 class="text-l font-semibold mb-3"><br>
+        <p class="text-2xl"><strong>Property & Disclaimer</strong><br></p>
+        All original content on this website is the intellectual property of Ferlaty, unless otherwise stated. Users may
+        not copy, reproduce, or redistribute this content without prior written permission.<br><br>
+
+        Any third-party names, logos, trademarks, or service marks (including, but not limited to, YouTube and TikTok)
+        are the property of their respective owners and are used for identification or informational purposes
+        only.<br><br>
+
+        While we strive for accuracy, Ferlaty makes no representations or warranties regarding the completeness or
+        correctness of the information and is not responsible for errors or omissions.<br>
+      </h2>
+      <h2 class="text-l font-semibold mb-3"><br>
+        <p class="text-2xl"><strong>Cookies</strong><br></p>
+        We use cookies to improve user experience and Google Analytics for
+        website statistics.
+        No personal data is shared with third parties.
+        Users can disable cookies in their browser settings.
+      </h2>
+      <h2 class="text-l font-semibold mb-3"><br>
+        <p class="text-2xl"><strong>Projects</strong><br></p>
+        Projects like "IT Automation Tolkit", "Multiple App Launcher" and
+        others are provided "as-are" without any warranties.
+        The author is not responsible for any loss, damage, or misuse resulting from its use. Use on your own risk!
+      </h2>
+      <br><br>
+      <p class="text-lg">Last updated: 3.14.2026</p>
+    </section>
+  </main>
+
+<div id="footer_"></div>
+
+    <script type="module">
+      import { Footer_ } from './js/footer.js'
+
+      const container = document.getElementById('footer_');
+      container.innerHTML = Footer_;
+    </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" content="Ferlaty: News page. Here you find the news about our projects or the brand itself.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferlaty | News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="stylesheet" href="css/menuanimation.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+
+<body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col min-w-full" id="body">
+
+    <a id="myBtn" title="Go to top" href="#"><svg width="50px" height="50px" viewBox="0 0 24 24">
+            <path
+                d="M18.2929 15.2893C18.6834 14.8988 18.6834 14.2656 18.2929 13.8751L13.4007 8.98766C12.6195 8.20726 11.3537 8.20757 10.5729 8.98835L5.68257 13.8787C5.29205 14.2692 5.29205 14.9024 5.68257 15.2929C6.0731 15.6835 6.70626 15.6835 7.09679 15.2929L11.2824 11.1073C11.673 10.7168 12.3061 10.7168 12.6966 11.1073L16.8787 15.2893C17.2692 15.6798 17.9024 15.6798 18.2929 15.2893Z"
+                fill="#FFFFFF" />
+        </svg></a>
+
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.classList.add("transition"); // Use .add, not .toggle
+            } else {
+                mybutton.classList.remove("transition");
+            }
+        }
+    </script>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner"
+        style="position:fixed;bottom:0;width:100%;background:#010e14f5;color:#fefeff;padding:15px;text-align:center;display:none; z-index: 1;">
+        We use cookies to ensure you have the best experience on our website.
+        <a href="legal.html" class="text-blue-900 hover:underline">Read more</a>
+        <button id="accept-cookies" style="margin-left:10px;padding:5px 10px;"
+            class="inline-block m mt-0 px-10 py-2 bg-cyan-550 rounded-lg hover:bg-cyan-700 transition"><b>Accept</b></button>
+    </div>
+
+    <script>
+        setCookie = (cName, cValue, expDays) => {
+            let date = new Date();
+            date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+        }
+
+        getCookie = (cName) => {
+            const name = cName + "=";
+            const cDecoded = decodeURIComponent(document.cookie);
+            const cArr = cDecoded.split("; ");
+            let value;
+            cArr.forEach(val => {
+                if (val.indexOf(name) === 0) value = val.substring(name.length);
+            })
+
+            return value;
+        }
+
+        document.querySelector("#accept-cookies").addEventListener("click", () => {
+            document.querySelector("#cookie-banner").style.display = "none";
+            setCookie("cookies_accepted", true, 365);
+            loadGoogleAnalytics();
+        })
+
+        cookieMessage = () => {
+            if (!getCookie("cookies_accepted"))
+                document.querySelector("#cookie-banner").style.display = "block";
+        }
+
+        window.addEventListener("load", cookieMessage);
+
+        // Load GA only after consent
+        function loadGoogleAnalytics() {
+            const script = document.createElement('script');
+            script.src = "https://www.googletagmanager.com/gtag/js?id=G-CDTSQCSBVM";
+            script.async = true;
+            document.head.appendChild(script);
+
+            script.onload = function () {
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-CDTSQCSBVM');
+            };
+        }
+
+    </script>
+
+    <div class="relative">
+        <button popovertarget="desktop-menu-solutions" style="position: fixed; z-index: 2;" id="toggleScroll"
+            class="absolute top-0 left-1/2 transform -translate-x-1/2 inline-flex items-center gap-x-1 text-sm/60 font-semibold text-black text-[30px] my-8">
+            <span>
+                <div class="container" id="startMenuAnimation">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </span>
+        </button>
+
+        <script>
+            const btn = document.getElementById("toggleScroll");
+            const menu_btn = document.getElementById("startMenuAnimation")
+
+            btn.addEventListener("click", (e) => {
+                e.stopPropagation(); // prevent document click from firing
+                if (document.body.style.overflow === "hidden") {
+                    document.body.style.overflow = "auto";
+                } else {
+                    document.body.style.overflow = "hidden";
+                };
+                menu_btn.classList.toggle("change");
+            });
+
+            document.addEventListener('click', function (event) {
+                if (document.body.style.overflow === "hidden") {
+                    document.body.style.overflow = "auto";
+                    menu_btn.classList.toggle("change");
+                }
+            });
+        </script>
+
+       <div id="menu_"></div>
+
+    <script type="module">
+      import { Menu_ } from './js/menu.js'
+
+      const container = document.getElementById('menu_');
+      container.innerHTML = Menu_;
+    </script>
+
+    <header class="p-6 bg-stone-900 shadow-md display" style="position: fixed; width: 100%; z-index: 1;">
+        <a href="index.html"><img src="assets\ico.png" alt="logo" style="float:right" width="50px" height="50px" class="header_icon"></a>
+        <h1 class="text-3xl font-bold"><a href="index.html">Ferlaty</a></h1>
+        <p class="text-gray-600">
+        <div class="container">News</p>
+    </header>
+
+    <div class="h-24"></div>
+
+    <div class="flex flex-col min-h-screen items-center justify-center bg_img_02 relative text-center">
+        <h2 class="text-7xl mb-3 text-center"><b>News from and about Ferlaty</b></h2>
+        <a href="#news">
+        <svg width="200px" height="200px" viewBox="0 0 24 24" fill="white" stroke="none">
+          <path
+            d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+            fill="#FFFFFFF" />
+        </svg>
+        </div>
+    </div>
+
+    <main class="flex-1 p-6">
+        <section class="mb-8">
+
+            <div class="row" id="news">
+                <div class="leftcolumn">
+                    <div class="h-24"></div>
+
+                    <div class="card block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg">
+                        <h2 class="text-2xl"><b><u>A big re-deesign of the Ferlaty website</u></b></h2>
+                        <h5 class="text-md">19th March, 2026</h5>
+                        <div class="h-12"></div>
+                        <p>To increase the average sessiont time we made a big re-design of our website which involves every single page on our website. We moved from the previous, light theme design to our new, dark one. We also added a bunch of photos to be a better experience visiting the website. We also added sections, animations and a brand new footeer.</p>
+                    </div>
+
+                    <div class="card block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg">
+                        <h2 class="text-2xl"><b>Launch of the new 'News' page on the Ferlaty website</b></h2>
+                        <h5 class="text-md">16th March, 2026</h5>
+                        <div class="block mx-auto rounded-lg" style="height:200px;"><img src="assets/ico.png"
+                                alt="Ferlaty logo"></div>
+                        <p>We just started our news page today, here you can read about the upcoming news about our
+                            projects and the brand itself, Ferlaty. We hope that you will like it :D.</p>
+                    </div>
+                </div>
+                <div class="rightcolumn">
+                    <div class="card block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg">
+                        <a href="about_us.html">
+                            <h2 class="text-2xl hover:underline"><b>About Us</b></h2>
+                            <p class="text-lg hover:text-blue-700 hover:underline">Read more about us by clicking here.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="card block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg">
+                        <a href="content.html">
+                            <h3 class="text-2xl font-semibold hover:text-blue-700"><u>Our projects:</u></h3>
+                        </a><br>
+                        <div class="fakeimg block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg">
+                            <a href="multiple_app_launcher.html">
+                                <img src="assets/multiple_app_launcher.png" alt="Multiple App Launcher"
+                                    class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg">
+                                <p class="text-md hover:text-blue-700 hover:underline font-semibold text-xl">Multiple
+                                    App Launcher</p>
+                            </a>
+                        </div><br>
+                        <div class="fakeimg block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg">
+                            <a href="https://www.overtake.gg/downloads/new-gui-for-ac.82780/">
+                                <img src="assets/New_GUI_for_AC_icon.png" alt="New GUI for AC"
+                                    class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg">
+                                <p class="text-md hover:text-blue-700 hover:underline font-semibold text-xl">New GUI for
+                                    AC</p>
+                            </a>
+                        </div><br>
+                        <div class="fakeimg block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg">
+                            <a href="it_automation_toolkit.html">
+                                <img src="assets/IT_AUTOMATION_TOOLKIT_COVER.jpg" alt="IT Automation Toolkit"
+                                    class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg">
+                                <p class="text-md hover:text-blue-700 hover:underline font-semibold text-xl">IT
+                                    Automation Toolkit</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <div id="footer_"></div>
+
+    <script type="module">
+      import { Footer_ } from './js/footer.js'
+
+      const container = document.getElementById('footer_');
+      container.innerHTML = Footer_;
+    </script>
+</body>
+
+</html>
