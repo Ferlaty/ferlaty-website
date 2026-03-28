@@ -41,7 +41,7 @@ export const Footer_ = `
       <div class="footer-classic__bottom">
 
         <p class="footer-classic__copyright">
-          © 2026 Ferlaty. All rights reserved. | <a href="legal.html">Legal</a>
+          © 2026 Ferlaty. All rights reserved. | <a href="legal.html">Legal</a> | <a href="https://github.com/Ferlaty/ferlaty-website">Source code</a>
         </p>
 
         <nav class="footer-classic__social" aria-label="Social Media">
