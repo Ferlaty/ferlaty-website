@@ -24,7 +24,7 @@
 
 <body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col min-w-full">
 
-   <a id="myBtn" title="Go to top" href="#"><svg width="50px" height="50px" viewBox="0 0 24 24">
+  <a id="myBtn" title="Go to top" href="#"><svg width="50px" height="50px" viewBox="0 0 24 24">
       <path
         d="M18.2929 15.2893C18.6834 14.8988 18.6834 14.2656 18.2929 13.8751L13.4007 8.98766C12.6195 8.20726 11.3537 8.20757 10.5729 8.98835L5.68257 13.8787C5.29205 14.2692 5.29205 14.9024 5.68257 15.2929C6.0731 15.6835 6.70626 15.6835 7.09679 15.2929L11.2824 11.1073C11.673 10.7168 12.3061 10.7168 12.6966 11.1073L16.8787 15.2893C17.2692 15.6798 17.9024 15.6798 18.2929 15.2893Z"
         fill="#FFFFFF" />
@@ -117,7 +117,7 @@
       </span>
     </button>
 
-     <script>
+    <script>
       const btn = document.getElementById("toggleScroll");
       const menu_btn = document.getElementById("startMenuAnimation")
 
@@ -139,7 +139,7 @@
       });
     </script>
 
-   <div id="menu_"></div>
+    <div id="menu_"></div>
 
     <script type="module">
       import { Menu_ } from './js/menu.js'
@@ -149,114 +149,161 @@
     </script>
 
 
-  <header class="p-6 bg-stone-900 shadow-md display" style="position: fixed; width: 100%; z-index: 1;">
-    <a href="index.html"><img src="assets\ico.png" alt="logo" style="float:right" width="50px" height="50px" class="header_icon"></a>
-    <h1 class="text-3xl font-bold"><a href="index.html">Ferlaty</a></h1>
-    <p class="text-gray-600">
-    <div class="container">Contact us</p>
-  </header>
+    <header class="p-6 bg-stone-900 shadow-md display" style="position: fixed; width: 100%; z-index: 1;">
+      <a href="index.html"><img src="assets\ico.png" alt="logo" style="float:right" width="50px" height="50px"
+          class="header_icon"></a>
+      <h1 class="text-3xl font-bold"><a href="index.html">Ferlaty</a></h1>
+      <p class="text-gray-600">
+      <div class="container">Contact us</p>
+    </header>
 
-  <main class="flex-1 p-6 max-w-6xl mx-auto">
-    <div class="h-24"></div>
+    <main class="flex-1 p-6 max-w-6xl mx-auto">
+      <div class="h-24"></div>
 
-    <section class="contact-section">
-      <div class="contact-intro">
-        <h2 class="contact-title text-6xl font-bold">Contact us<br></h2>
-        <p class="contact-description text-xl">
-          <br>Fill out the form below and we will get back to you as soon as possible.
-        </p>
-      </div>
-
-      <form class="contact-form" id="contact-form1">
-
-        <div class="form-group-container">
-          <div class="form-group">
-            <label for="name" class="form-label text-2xl font-semibold"><br>Name</label>
-            <input id="name" name="name" class="form-input border-black p-2 rounded w-full bg-stone-900" placeholder="Your name"
-              type="text" />
-          </div>
-          <div class="form-group">
-            <label for="email" class="form-label text-2xl font-semibold">E-mail</label>
-            <input id="email" name="email" class="form-input border-black p-2 rounded w-full bg-stone-900" placeholder="Your e-mail"
-              type="email" />
-          </div>
-          <div class="form-group">
-            <label for="message" class="form-label text-2xl font-semibold">Message</label>
-            <textarea class="form-textarea border-black p-2 rounded w-full bg-stone-900" id="message" name="message"
-              placeholder="Your message"></textarea>
-          </div>
+      <section class="contact-section">
+        <div class="contact-intro">
+          <h2 class="contact-title text-6xl font-bold">Contact us<br></h2>
+          <p class="contact-description text-xl">
+            <br>Fill out the form below and we will get back to you as soon as possible.
+          </p>
         </div>
-        <button class="form-submit inline-block mt-4 px-6 py-3 bg-cyan-600 text-white font-semibold rounded-lg
+
+        <form class="contact-form" id="contact-form1">
+
+          <div class="form-group-container">
+            <div class="form-group">
+              <label for="name" class="form-label text-2xl font-semibold"><br>Name</label>
+              <input id="name" name="name" class="form-input border-black p-2 rounded w-full bg-stone-900"
+                placeholder="Your name" type="text" />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label text-2xl font-semibold">E-mail</label>
+              <input id="email" name="email" class="form-input border-black p-2 rounded w-full bg-stone-900"
+                placeholder="Your e-mail" type="email" />
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label text-2xl font-semibold">Message</label>
+              <textarea class="form-textarea border-black p-2 rounded w-full bg-stone-900" id="message" name="message"
+                placeholder="Your message"></textarea>
+            </div>
+          </div>
+          <button class="form-submit inline-block mt-4 px-6 py-3 bg-cyan-600 text-white font-semibold rounded-lg
            shadow-lg hover:bg-cyan-700 hover:shadow-xl transform hover:scale-105
            transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
-          type="submit">Send Message</button>
-      </form><br>
+            type="submit">Send Message</button>
+        </form><br>
 
-      <div class="flex items-center justify-between p-4 mb-4 text-green-800 bg-green-100 rounded-lg shadow-md"
-        role="alert" style="display: none;" id="success">
-        <span class="font-medium">Message sent successfully! We will  reply as soon as we can.</span>
-        <button type="button" class="ml-4 text-black-800 hover:text-black-900" id="success_btn">
-          ✕
-        </button>
-      </div>
-      <div class="flex items-center justify-between p-4 mb-4 text-red-800 bg-red-500 rounded-lg shadow-md" role="alert"
-        style="display: none;" id="fail">
-        <span class="font-medium">Error! Something went wrong.</span>
-        <button type="button" class="ml-4 text-black-800 hover:text-black-900" id="fail_btn">
-          ✕
-        </button>
-      </div>
-      <div class="flex items-center justify-between p-4 mb-4 text-red-800 bg-red-100 rounded-lg shadow-md" role="alert"
-        style="display: none;" id="blank">
-        <span class="font-medium">Please, fill out every field.</span>
-        <button type="button" class="ml-4 text-black hover:text-black-900" id="blank_btn">
-          ✕
-        </button>
-      </div>
+        <div class="flex items-center justify-between p-4 mb-4 text-green-800 bg-green-300 rounded-lg shadow-md"
+          role="alert" style="display: none;" id="success">
+          <span class="font-medium">Message sent successfully! We will reply as soon as we can.</span>
+          <button type="button" class="ml-4 text-black-800 hover:text-black-900" id="success_btn">
+            ✕
+          </button>
+        </div>
+        <div class="flex items-center justify-between p-4 mb-4 text-red-900 bg-red-400 rounded-lg shadow-md"
+          role="alert" style="display: none;" id="timeOut">
+          <span class="font-medium" id="timeOutTxt">You must wait 5 minutes (300s) between sending forms. Time spent
+            since last
+            submission s.</span>
+          <button type="button" class="ml-4 text-black-800 hover:text-black-900" id="timeOut_btn">
+            ✕
+          </button>
+        </div>
+        <div class="flex items-center justify-between p-4 mb-4 text-red-800 bg-red-500 rounded-lg shadow-md"
+          role="alert" style="display: none;" id="fail">
+          <span class="font-medium">Error! Something went wrong.</span>
+          <button type="button" class="ml-4 text-black-800 hover:text-black-900" id="fail_btn">
+            ✕
+          </button>
+        </div>
+        <div class="flex items-center justify-between p-4 mb-4 text-red-800 bg-red-300 rounded-lg shadow-md"
+          role="alert" style="display: none;" id="blank">
+          <span class="font-medium">Please, fill out every field.</span>
+          <button type="button" class="ml-4 text-black hover:text-black-900" id="blank_btn">
+            ✕
+          </button>
+        </div>
 
-    </section>
-  </main>
-  <script type="text/javascript">
-    window.onload = function () {
-      document.getElementById('contact-form1').addEventListener('submit', function (event) {
-        event.preventDefault();
+      </section>
+    </main>
+    <script type="text/javascript">
+      let timer = parseInt(localStorage.getItem('timer')) || 0;
 
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
+      function timer_start() {
+        timer++; // Increment by 1
+        console.log(`Time since spent since submition is ${timer}s`); // Or update DOM: document.getElementById('id').innerText = counter;
+        localStorage.setItem('timer', timer);
+        document.getElementById('timeOutTxt').innerHTML = `You must wait 5 minutes (300s) between sending forms. Time spent since last submission ${timer} s.`;
+      };
 
-        if (!name || !email || !message) {
-          document.getElementById('blank').style.display = 'flex'; // show error
-          return; // stop submission
-        }
+      let runningInterval;
 
-        // these IDs from the previous steps
-        emailjs.sendForm('service_0dwc2tr', 'template_5vcrw25', this)
-          .then(() => {
-            console.log('SUCCESS!');
-            document.getElementById('success').style.display = 'flex';
-            document.getElementById("contact-form1").reset();
-          }, (error) => {
-            console.log('FAILED...', error);
-            document.getElementById('fail').style.display = 'flex';
-          });
+      function StartTimer() {
+        if (runningInterval) {return};
+        runningInterval = setInterval(timer_start, 1000);
+      }
+
+      if (timer !== 0 && timer < 300) {
+        StartTimer();
+      }
+
+      window.onload = function () {
+        document.getElementById('contact-form1').addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const message = document.getElementById('message').value.trim();
+
+
+          if (!name || !email || !message) {
+            document.getElementById('blank').style.display = 'flex'; // show error
+            return; // stop submission
+          }
+
+          if (timer < 300 && timer !== 0) {
+            document.getElementById('timeOut').style.display = 'flex';
+            return;
+          }
+          else {
+            // Stop the timer when it hits the limit
+            clearInterval(runningInterval);
+            document.getElementById('timeOut').style.display = 'mone';
+            localStorage.setItem('timer', 0); // Reset for next time
+          }
+
+
+          // these IDs from the previous steps
+          emailjs.sendForm('service_0dwc2tr', 'template_5vcrw25', this)
+            .then(() => {
+              console.log('SUCCESS!');
+              document.getElementById('success').style.display = 'flex';
+              document.getElementById("contact-form1").reset();
+              StartTimer();
+            }, (error) => {
+              console.log('FAILED...', error);
+              document.getElementById('fail').style.display = 'flex';
+            });
+        });
+      }
+    </script>
+    <script>
+      document.getElementById("success_btn").addEventListener('click', function () {
+        document.getElementById("success").style.display = 'none';
       });
-    }
-  </script>
-  <script>
-    document.getElementById("success_btn").addEventListener('click', function () {
-      document.getElementById("success").style.display = 'none';
-    });
-    document.getElementById("fail_btn").addEventListener('click', function () {
-      document.getElementById("fail").style.display = 'none';
-    });
-    document.getElementById("blank_btn").addEventListener('click', function () {
-      document.getElementById("blank").style.display = 'none';
-    });
-  </script>
+      document.getElementById("fail_btn").addEventListener('click', function () {
+        document.getElementById("fail").style.display = 'none';
+      });
+      document.getElementById("blank_btn").addEventListener('click', function () {
+        document.getElementById("blank").style.display = 'none';
+      });
+      document.getElementById("timeOut_btn").addEventListener('click', function () {
+        document.getElementById("timeOut").style.display = 'none';
+      });
+    </script>
 
 
-<div id="footer_"></div>
+    <div id="footer_"></div>
 
     <script type="module">
       import { Footer_ } from './js/footer.js'
