@@ -1,0 +1,5 @@
+Contact: https://ferlaty.pages.dev/contact_us
+Contact: mailto:ferlaty.dev@gmail.com
+Expires: 2026-08-30T22:00:00.000Z
+Acknowledgments: https://ferlaty.pages.dev/news
+Preferred-Languages: en, sk, cz
