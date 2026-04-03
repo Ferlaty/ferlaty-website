@@ -2,3 +2,5 @@ User-agent: *
 Disallow: /assets/yt_icon_red_digital.png
 Disallow: /assets/TikTok_Icon_Black_Circle.png
 Disallow: /assets/github-mark.png
+
+Sitemap: https://ferlaty.pages.dev/sitemap.xml
