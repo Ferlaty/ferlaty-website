@@ -159,3 +159,16 @@ html {
     display: none;
   }
 }
+
+/* The starting state (hidden and pushed down) */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0,140px,0);
+  transition: all 0.8s ease-out;
+}
+
+/* The active state (visible and at its normal position) */
+.reveal.active {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
