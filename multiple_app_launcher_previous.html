@@ -153,9 +153,9 @@
     <div class="h-24"></div>
 
     <div class="flex flex-col min-h-screen items-center justify-center banner_content relative text-center">
-    <h2 class="text-7xl font-bold mb-3"><a href="multiple_app_launcher.html" class="hover:underline">Multiple App Launcher</a><br>Previous releases</h2> 
+    <h2 class="text-7xl font-bold mb-3 reveal"><a href="multiple_app_launcher.html" class="hover:underline">Multiple App Launcher</a><br>Previous releases</h2> 
     <a href="#releases">
-        <svg width="200px" height="200px" viewBox="0 0 24 24" fill="white" stroke="none">
+        <svg width="200px" height="200px" viewBox="0 0 24 24" fill="white" stroke="none" class="reveal">
           <path
             d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
             fill="#FFFFFFF" />
@@ -166,12 +166,12 @@
     <main class="flex-1 p-6 max-w-6xl mx-auto">
       <section class="mb-8" id="releases">
         <div class="h-24"></div>
-        <h2 class="text-6xl text-center font-semibold mb-3"><br>Previous releases:</h2>
+        <h2 class="text-6xl text-center font-semibold mb-3 reveal"><br>Previous releases:</h2>
         <div class="h-24"></div>
 
         <!-- 1.3.0 --> 
         <details>
-        <summary class="leading-relaxed text-grey-300 text-4xl">
+        <summary class="leading-relaxed text-grey-300 text-4xl reveal">
           v 1.3.0
         </summary>
         <p class="text-l font-semibold mb-3">1. App limit raised to 10;<br>
@@ -196,7 +196,7 @@
         </details>
        <!-- 1.2.1 -->
          <details>
-        <summary class="leading-relaxed text-grey-300 text-4xl">
+        <summary class="leading-relaxed text-grey-300 text-4xl reveal">
           v 1.2.1
         </summary>
         <p class="text-l font-semibold mb-3">New, fresh and modern look of the settings app.<br>
@@ -212,7 +212,7 @@
 
         <!-- 1.2.0 -->
         <details>
-        <summary class="leading-relaxed text-grey-300 text-4xl">
+        <summary class="leading-relaxed text-grey-300 text-4xl reveal">
           v 1.2.0
         </summary>
         <p class="text-l font-semibold mb-3">Added the option to change the delay time how you want.<br>
@@ -228,7 +228,7 @@
 
         <!-- 1.1.1 -->
         <details>
-        <summary class="leading-relaxed text-grey-300 text-4xl">
+        <summary class="leading-relaxed text-grey-300 text-4xl reveal">
           v 1.1.1
         </summary>
         <p class="text-l font-semibold mb-3">
@@ -250,7 +250,7 @@
 
         <!-- 1.1.0 -->
         <details>
-        <summary class="leading-relaxed text-grey-300 text-4xl">
+        <summary class="leading-relaxed text-grey-300 text-4xl reveal">
           v 1.1.0
         </summary>
         <p class="text-l font-semibold mb-3">Major improvements, fixed most of the errors and added new features to the app.</p>
@@ -265,7 +265,7 @@
 
         <!-- 1.0.0 -->
         <details>
-        <summary class="leading-relaxed text-grey-300 text-4xl">
+        <summary class="leading-relaxed text-grey-300 text-4xl reveal">
           v 1.0.0
         </summary>
         <p class="text-l font-semibold mb-3">First ever release.</p>
@@ -290,6 +290,8 @@
       const container = document.getElementById('footer_');
       container.innerHTML = Footer_;
     </script>
+
+    <script src="./js/fly-in-animation.js"></script>
 </body>
 
 </html>
