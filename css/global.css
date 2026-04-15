@@ -172,3 +172,11 @@ html {
   opacity: 1;
   transform: translate3d(0,0,0);
 }
+
+code {
+  font-family: Consolas,"courier new";
+  color: rgb(0, 0, 0);
+  background-color: #b1b1b1;
+  padding: 2px;
+  overflow-wrap: break-word;
+}
