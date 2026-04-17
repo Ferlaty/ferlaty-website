@@ -3,22 +3,29 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="content" content="Ferlaty - IT Automation Toolkit:  IT toolkit with various tools for your needs and for free.">
+  <meta name="content"
+    content="Ferlaty - IT Automation Toolkit:  IT toolkit with various tools for your needs and for free.">
   <link rel="canonical" href="https://ferlaty.pages.dev/it_automation_toolkit" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ferlaty | IT Automation Toolkit</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/png" href="favicon.ico">
-   <link rel="stylesheet" href="css/menuanimation.css">
-   <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/menuanimation.css">
+  <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/content_pages.css">
+  <meta property="og:site_name" content="Ferlaty">
+  <meta property="og:title" content="Ferlaty | IT Automation Toolkit">
+  <meta property="og:description" content="Ferlaty - IT Automation Toolkit:  IT toolkit with various tools for your needs and for free.">
+  <meta property="og:image" content="https://ferlaty.pages.dev/assets/icon.png">
+  <meta property="og:url" content="https://ferlaty.pages.dev/it_automation_toolkit">
+  <meta property="og:type" content="website">
 </head>
 
 
 <body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col min-w-full">
 
-   <a id="myBtn" title="Go to top" href="#"><svg width="50px" height="50px" viewBox="0 0 24 24">
+  <a id="myBtn" title="Go to top" href="#"><svg width="50px" height="50px" viewBox="0 0 24 24">
       <path
         d="M18.2929 15.2893C18.6834 14.8988 18.6834 14.2656 18.2929 13.8751L13.4007 8.98766C12.6195 8.20726 11.3537 8.20757 10.5729 8.98835L5.68257 13.8787C5.29205 14.2692 5.29205 14.9024 5.68257 15.2929C6.0731 15.6835 6.70626 15.6835 7.09679 15.2929L11.2824 11.1073C11.673 10.7168 12.3061 10.7168 12.6966 11.1073L16.8787 15.2893C17.2692 15.6798 17.9024 15.6798 18.2929 15.2893Z"
         fill="#FFFFFF" />
@@ -101,12 +108,12 @@
 
   <div id="menu_"></div>
 
-    <script type="module">
-      import { Menu_ } from './js/menu.js'
+  <script type="module">
+    import { Menu_ } from './js/menu.js'
 
-      const container = document.getElementById('menu_');
-      container.innerHTML = Menu_;
-    </script>
+    const container = document.getElementById('menu_');
+    container.innerHTML = Menu_;
+  </script>
 
   <div class="relative">
     <button popovertarget="desktop-menu-solutions" style="position: fixed; z-index: 2;" id="toggleScroll"
@@ -120,7 +127,7 @@
       </span>
     </button>
 
-     <script>
+    <script>
       const btn = document.getElementById("toggleScroll");
       const menu_btn = document.getElementById("startMenuAnimation")
 
@@ -146,21 +153,22 @@
 
 
     <header class="p-6 bg-stone-900 shadow-md display" style="position: fixed; width: 100%; z-index: 1;">
-    <a href="index.html"><img src="assets\ico.png" alt="logo" style="float:right" width="50px" height="50px" class="header_icon"></a>
-    <h1 class="text-3xl font-bold"><a href="index.html">Ferlaty</a></h1>
-    <p class="text-gray-600">
-      <p class="text-gray-600"><div class="container">IT Automation Toolkit</p>
+      <a href="index.html"><img src="assets\ico.png" alt="logo" style="float:right" width="50px" height="50px"
+          class="header_icon"></a>
+      <h1 class="text-3xl font-bold"><a href="index.html">Ferlaty</a></h1>
+      <p class="text-gray-600">
+      <p class="text-gray-600">
+      <div class="container">IT Automation Toolkit</p>
     </header>
 
     <div class="h-24"></div>
 
     <div class="flex flex-col min-h-screen items-center justify-center banner_content relative text-center">
       <h2 class="text-6xl font-bold mb-3 reveal">IT Automation Toolkit</h2>
-    <a href="#download"
-            class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition text-3xl reveal hover:scale-105
+      <a href="#download" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition text-3xl reveal hover:scale-105
            transition-all duration-700 ease-in-out">
-            <strong>Download</strong>
-          </a> 
+        <strong>Download</strong>
+      </a>
     </div>
 
 
@@ -229,11 +237,11 @@
         <div class="p-6 bg-stone-900 rounded-xl shadow reveal">
           <h3 class="text-xl font-semibold mb-2">Download Installer</h3>
           <p class="text-gray-400">Download the latest version of the installer(.exe). <a
-              href="https://www.virustotal.com/gui/file-analysis/YWU4ZDZkZWViNzliZDY2MGRmZmUwOWY3ODdjNDk5ZTM6MTc1OTQyMzg4OA==" class="hover:underline"><i>VirusTotal</i>
+              href="https://www.virustotal.com/gui/file-analysis/YWU4ZDZkZWViNzliZDY2MGRmZmUwOWY3ODdjNDk5ZTM6MTc1OTQyMzg4OA=="
+              class="hover:underline"><i>VirusTotal</i>
               report for the executable.</a></p>
           <a href="https://github.com/Ferlaty/it-automation-toolkit/releases/download/v1.0.0/it_automation_toolkit_installer.zip"
-            id="download_i"
-            class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+            id="download_i" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out">
             Download(25MB)
           </a>
@@ -242,13 +250,14 @@
         <div class="p-6 bg-stone-900 rounded-xl shadow reveal">
           <h3 class="text-xl font-semibold mb-2">Download Portable</h3>
           <p class="text-gray-400">Download the latest version of the portable version(.zip). <a
-              href="https://www.virustotal.com/gui/file/4e3fa1c1cfd5eeec3f7ff70d83c81ab18c1dae6a4910daff95b1782c28d79a90?nocache=1" class="hover:underline"><i>VirusTotal</i>
+              href="https://www.virustotal.com/gui/file/4e3fa1c1cfd5eeec3f7ff70d83c81ab18c1dae6a4910daff95b1782c28d79a90?nocache=1"
+              class="hover:underline"><i>VirusTotal</i>
               report for the executable </a>and<a
-              href="https://www.virustotal.com/gui/file/d549f6f9c8db2a37343f1c8491c55ba02f2a459dabce2ae89319dcf415c006e4?nocache=1" class="hover:underline">
+              href="https://www.virustotal.com/gui/file/d549f6f9c8db2a37343f1c8491c55ba02f2a459dabce2ae89319dcf415c006e4?nocache=1"
+              class="hover:underline">
               for the .zip file</a></p>
           <a href="https://github.com/Ferlaty/it-automation-toolkit/releases/download/v1.0.0/it_automation_toolkit_portable.zip"
-            id="download_p" download="it_automation_toolkit_portable.zip"
-            class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+            id="download_p" download="it_automation_toolkit_portable.zip" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out">
             Download(27MB)
           </a>
@@ -256,7 +265,7 @@
       </section>
     </main>
 
-  <div id="footer_"></div>
+    <div id="footer_"></div>
 
     <script type="module">
       import { Footer_ } from './js/footer.js'

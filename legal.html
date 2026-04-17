@@ -12,11 +12,17 @@
   <link rel="stylesheet" href="css/menuanimation.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/footer.css">
+  <meta property="og:site_name" content="Ferlaty">
+  <meta property="og:title" content="Ferlaty | Legal">
+  <meta property="og:description" content="Ferlaty - Legal">
+  <meta property="og:image" content="https://ferlaty.pages.dev/assets/Ferlaty_dev.png">
+  <meta property="og:url" content="https://ferlaty.pages.dev/legal">
+  <meta property="og:type" content="website">
 </head>
 
 <body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col min-w-full">
 
-   <a id="myBtn" title="Go to top" href="#"><svg width="50px" height="50px" viewBox="0 0 24 24">
+  <a id="myBtn" title="Go to top" href="#"><svg width="50px" height="50px" viewBox="0 0 24 24">
       <path
         d="M18.2929 15.2893C18.6834 14.8988 18.6834 14.2656 18.2929 13.8751L13.4007 8.98766C12.6195 8.20726 11.3537 8.20757 10.5729 8.98835L5.68257 13.8787C5.29205 14.2692 5.29205 14.9024 5.68257 15.2929C6.0731 15.6835 6.70626 15.6835 7.09679 15.2929L11.2824 11.1073C11.673 10.7168 12.3061 10.7168 12.6966 11.1073L16.8787 15.2893C17.2692 15.6798 17.9024 15.6798 18.2929 15.2893Z"
         fill="#FFFFFF" />
@@ -131,15 +137,16 @@
 
   <div id="menu_"></div>
 
-    <script type="module">
-      import { Menu_ } from './js/menu.js'
+  <script type="module">
+    import { Menu_ } from './js/menu.js'
 
-      const container = document.getElementById('menu_');
-      container.innerHTML = Menu_;
-    </script>
+    const container = document.getElementById('menu_');
+    container.innerHTML = Menu_;
+  </script>
 
   <header class="p-6 bg-stone-900 shadow-md display" style="position: fixed; width: 100%; z-index: 1;">
-    <a href="index.html"><img src="assets\ico.png" alt="logo" style="float:right" width="50px" height="50px" class="header_icon"></a>
+    <a href="index.html"><img src="assets\ico.png" alt="logo" style="float:right" width="50px" height="50px"
+        class="header_icon"></a>
     <h1 class="text-3xl font-bold"><a href="index.html">Ferlaty</a></h1>
     <p class="text-gray-600">
     <div class="container">Legal</p>
@@ -149,7 +156,8 @@
     <div class="h-24"></div>
     <section class="mb-8">
       <h2 class="text-6xl font-bold mb-3 reveal"><a href="about_us.html">Legal Notice</a></h2><br>
-      <h2 class="text-2xl font-semibold mb-3 reveal"> © 2026 Ferlaty. All rights reserved. This website is owned and maintained
+      <h2 class="text-2xl font-semibold mb-3 reveal"> © 2026 Ferlaty. All rights reserved. This website is owned and
+        maintained
         by Ferlaty.<br></h2>
       <h2 class="text-l font-semibold mb-3 reveal"><br>
         <p class="text-2xl"><strong>Property & Disclaimer</strong><br></p>
@@ -181,15 +189,16 @@
     </section>
   </main>
 
-<div id="footer_"></div>
+  <div id="footer_"></div>
 
-    <script type="module">
-      import { Footer_ } from './js/footer.js'
+  <script type="module">
+    import { Footer_ } from './js/footer.js'
 
-      const container = document.getElementById('footer_');
-      container.innerHTML = Footer_;
-    </script>
+    const container = document.getElementById('footer_');
+    container.innerHTML = Footer_;
+  </script>
 
-    <script src="./js/fly-in-animation.js"></script>
+  <script src="./js/fly-in-animation.js"></script>
 </body>
+
 </html>
