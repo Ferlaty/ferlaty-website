@@ -1,6 +1,6 @@
 let prevScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 let prevScrollDirection = '';
-const btn = document.getElementById("myBtn");
+const btnGoToTop = document.getElementById("myBtn");
 
 window.addEventListener('scroll', function() {
   const st = window.pageYOffset || document.documentElement.scrollTop;
@@ -8,16 +8,16 @@ window.addEventListener('scroll', function() {
     if (st > prevScrollTop && prevScrollDirection !== 'down') {
         // downscroll code here
         prevScrollDirection = 'down';
-        btn.classList.remove("transition");
+        btnGoToTop.classList.remove("transition");
     }
         else if (st < prevScrollTop && prevScrollDirection !== 'up') {
         // upscroll code
         prevScrollDirection = 'up';
-        btn.classList.add("transition");
+        btnGoToTop.classList.add("transition");
      }
   }
   else {
-        btn.classList.remove("transition");
+        btnGoToTop.classList.remove("transition");
         }
   prevScrollTop = st <= 0 ? 0 : st; // for Mobile or negative scrolling
 }, false);
