@@ -39,21 +39,7 @@
         fill="#FFFFFF" />
     </svg></a>
 
-  <script>
-    // Get the button
-    let mybutton = document.getElementById("myBtn");
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.classList.add("transition"); // Use .add, not .toggle
-      } else {
-        mybutton.classList.remove("transition");
-      }
-    }
-  </script>
+  <script src="js/detect_scroll_direction_for_upp_btn.js"></script>  
 
   <!-- Cookie Consent Banner -->
   <div id="cookie-banner"
@@ -189,8 +175,8 @@
 
       <div class="p-2 max-w-6xl mx-auto min-h-screen">
         <section class="mb-8">
-          <div class="h-28"></div>
-          <h2 class="text-6xl font-bold mb-3 hover:underline reveal text-center" id="apps_content">
+          <div class="h-28" id="apps_content"></div>
+          <h2 class="text-6xl font-bold mb-3 hover:underline reveal text-center">
             <a href="content.html">Our
               applications</a>
           </h2>
@@ -211,7 +197,7 @@
           <h2 class="text-5xl font-semibold mb-3 hover:text-blue-700 hover:underline reveal"><a
               href="it_automation_toolkit.html"><br><br>IT Automation Toolkit</a></h2>
           <a href="it_automation_toolkit.html"><img src="assets/IT_AUTOMATION_TOOLKIT_COVER.jpg"
-              alt="it_automation_toolkit_cover" class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg hover:scale-105
+              alt="it_automation_toolkit_cover" class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg reveal hover:scale-105
            transition-all duration-700 ease-in-out" style="width:90%; height: 55%;"></a><br>
           <div class="flex w-full items-center justify-between">
             <p class="leading-relaxed text-grey-300 text-lg reveal"><br>An IT toolkit with varius tools for your needs.
@@ -243,8 +229,8 @@
         <p class="leading-relaxed text-grey-300 text-md reveal"><br>The current flagship edit about Max Verstappen.</p>
       </div>
   </div>
-  <div class="flex flex-col min-h-screen items-center justify-center game_mods_banner relative">
-    <h2 class="text-7xl font-semibold mb-3 text-center reveal" id="gamemods_content"><br><br><a
+  <div class="flex flex-col min-h-screen items-center justify-center game_mods_banner relative" id="gamemods_content">
+    <h2 class="text-7xl font-semibold mb-3 text-center reveal"><br><br><a
         href="content.html">Assetto Corsa mods</a>
     </h2><br>
     <a href="#ac_mods" class="reveal">

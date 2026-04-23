@@ -31,21 +31,7 @@
         fill="#FFFFFF" />
     </svg></a>
 
-  <script>
-    // Get the button
-    let mybutton = document.getElementById("myBtn");
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.classList.add("transition"); // Use .add, not .toggle
-      } else {
-        mybutton.classList.remove("transition");
-      }
-    }
-  </script>
+  <script src="js/detect_scroll_direction_for_upp_btn.js"></script>  
 
   <!-- Cookie Consent Banner -->
   <div id="cookie-banner"

@@ -30,21 +30,7 @@
         fill="#FFFFFF" />
     </svg></a>
 
-  <script>
-    // Get the button
-    let mybutton = document.getElementById("myBtn");
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.classList.add("transition"); // Use .add, not .toggle
-      } else {
-        mybutton.classList.remove("transition");
-      }
-    }
-  </script>
+  <script src="js/detect_scroll_direction_for_upp_btn.js"></script>  
 
   <!-- Cookie Consent Banner -->
   <div id="cookie-banner"
@@ -232,7 +218,7 @@
                   </td>
                 </tr>
                 <tr class="divide-x divide-gray-600 text-md">
-                  <td class="text-center py-4 font-semibold">Linux</td>
+                  <td class="text-center py-4 font-semibold">Linux<br>(Released on 16.4.2026)</td>
                   <td class="text-center py-4"><a
                       href="https://github.com/Ferlaty/multiple_app_launcher/releases/download/v1.4.0/multiple_app_launcher1.4.0-linux-.tar.gz"
                       id="download_i"
