@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-y: scroll;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -179,4 +180,8 @@ code {
   background-color: #b1b1b1;
   padding: 2px;
   overflow-wrap: break-word;
+}
+
+.stop-scrolling {
+  overflow: hidden;
 }

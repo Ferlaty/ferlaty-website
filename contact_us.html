@@ -111,27 +111,7 @@
       </span>
     </button>
 
-    <script>
-      const btn = document.getElementById("toggleScroll");
-      const menu_btn = document.getElementById("startMenuAnimation")
-
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation(); // prevent document click from firing
-        if (document.body.style.overflow === "hidden") {
-          document.body.style.overflow = "auto";
-        } else {
-          document.body.style.overflow = "hidden";
-        };
-        menu_btn.classList.toggle("change");
-      });
-
-      document.addEventListener('click', function (event) {
-        if (document.body.style.overflow === "hidden") {
-          document.body.style.overflow = "auto";
-          menu_btn.classList.toggle("change");
-        }
-      });
-    </script>
+    <script src="./js/stopScrollingForMenuBar.js"></script>
 
     <div id="menu_"></div>
 
