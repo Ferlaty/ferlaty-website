@@ -9,3 +9,28 @@
   -webkit-mask-image: linear-gradient(to top, transparent 10%, black 20%);
   mask-image: linear-gradient(to top, transparent 10%, black 20%);
 }
+
+.banner_MultiplAppLauncher {
+  background-image: url("../assets/MultipleAppLauncher.gif");
+  background-size: cover;
+  /* Scales the image to fill the container */
+  background-position: center;
+  /* Centers the image */
+  background-repeat: no-repeat;
+  position: relative;
+  -webkit-mask-image: linear-gradient(to top, transparent 10%, black 20%);
+  mask-image: linear-gradient(to top, transparent 10%, black 20%);
+}
+
+.banner_MultiplAppLauncher::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* adjust darkness here */
+  z-index: 0;
+}
+
+.banner_MultiplAppLauncher h2, .banner_MultiplAppLauncher a {
+  position: relative;
+  z-index: 1; /* sit above the dark overlay */
+}
