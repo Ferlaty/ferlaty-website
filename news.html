@@ -143,63 +143,8 @@
                 <div class="leftcolumn">
                     <div class="h-24"></div>
 
-                    <div class="card block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg reveal">
-                        <h2 class="text-2xl"><b>Multiple App Launcher: release on Linux</b></h2>
-                        <h5 class="text-md">9th April 2026</h5>
-                        <div class="h-12"></div>
-                        <p>We made the decision to release our Multiple App Launcher application on Linux as well making
-                            it cross-platform. The release is expected to be before June of 2026.</p>
-                    </div>
+                    <div id="containerForNews"></div>
 
-                    <div class="card block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg reveal">
-                        <h2 class="text-2xl"><b><strong>BREAKING NEWS:</strong> <u>We moved from the old
-                                    'ferlaty.netlify.app' domain to the 'ferlaty.pages.dev'</u></b></h2>
-                        <h5 class="text-md">3rd April 2026</h5>
-                        <div class="h-12"></div>
-                        <p>We moved from Netlify to Cloudflare because of the pricing at Netlify. The old subdomain of
-                            'ferlaty.netlify.app' has automatic redirect to the new (ferlaty.pages.dev) one.</p>
-                    </div>
-
-                    <div class="card block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg reveal">
-                        <h2 class="text-2xl"><b>New release of the Multiple App Launcher (1.3.0)</b></h2>
-                        <h5 class="text-md">30th March, 2026</h5>
-                        <div class="h-12"></div>
-                        <p>Today we released version 1.3.0 of the <a href="multiple_app_launcher.html"
-                                class="hover:underline hover:text-blue-700">Multiple App Launcher</a>. Key highlights:
-                            new app limit of 10; console prints current time of the day; fully open source.</p>
-                    </div>
-
-                    <div class="card block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg reveal">
-                        <h2 class="text-2xl"><b><strong>BREAKING NEWS:</strong> <u>Open sourcing the "Multiple App
-                                    Launcher" project</u></b></h2>
-                        <h5 class="text-md">28th March, 2026</h5>
-                        <div class="h-12"></div>
-                        <p>To increase the trust, visibility and customisation, we are open sourcing the "<a
-                                href="multiple_app_launcher.html" class="hover:underline hover:text-blue-700">Multiple
-                                App Launcher</a>" project. So from today, 28th of March, 2026 the <a
-                                href="https://github.com/Ferlaty/multiple_app_launcher"
-                                class="hover:underline hover:text-blue-700">source code</a> is hosted on GitHub under
-                            the Apache License.</p>
-                    </div>
-
-                    <div class="card block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg reveal">
-                        <h2 class="text-2xl"><b>A big re-deesign of the Ferlaty website</b></h2>
-                        <h5 class="text-md">19th March, 2026</h5>
-                        <div class="h-12"></div>
-                        <p>To increase the average sessiont time we made a big re-design of our website which involves
-                            every single page on our website. We moved from the previous, light theme design to our new,
-                            dark one. We also added a bunch of photos to be a better experience visiting the website. We
-                            also added sections, animations and a brand new footeer.</p>
-                    </div>
-
-                    <div class="card block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg reveal">
-                        <h2 class="text-2xl"><b>Launch of the new 'News' page on the Ferlaty website</b></h2>
-                        <h5 class="text-md">16th March, 2026</h5>
-                        <div class="block mx-auto rounded-lg" style="height:200px;"><img src="assets/ico.png"
-                                alt="Ferlaty logo"></div>
-                        <p>We just started our news page today, here you can read about the upcoming news about our
-                            projects and the brand itself, Ferlaty. We hope that you will like it :D.</p>
-                    </div>
                 </div>
                 <div class="rightcolumn">
                     <div class="card block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg reveal hover:scale-105
@@ -258,7 +203,8 @@
         container.innerHTML = Footer_;
     </script>
 
-    <script src="./js/fly-in-animation.js"></script>
+    <script src="./js/loopForNews.js" type="module"></script>
+    <script src="./js/fly-in-animationForNews.js"></script>
 </body>
 
 </html>
