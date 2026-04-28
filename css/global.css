@@ -15,7 +15,7 @@ html {
 
 
 .main_banner {
-  background-image: url("../assets/main_banner.jpg");
+  background-image: url("/assets/main_banner.jpg");
   background-size: cover;
   /* Scales the image to fill the container */
   background-position: center;
@@ -27,7 +27,7 @@ html {
 }
 
 .patreon_banner {
-  background-image: url("../assets/patreon.jpg");
+  background-image: url("/assets/patreon.jpg");
   background-size: cover;
   /* Scales the image to fill the container */
   background-position: center;
@@ -48,7 +48,7 @@ html {
 }
 
 .game_mods_banner {
-  background-image: url("../assets/game_mods_banner.jpg");
+  background-image: url("/assets/game_mods_banner.jpg");
   background-size: cover;
   /* Scales the image to fill the container */
   background-position: center;
@@ -69,7 +69,7 @@ html {
 }
 
 .bg_img_01 {
-  background-image: url("../assets/bg_img_01.jpg");
+  background-image: url("/assets/bg_img_01.jpg");
   background-size: cover;
   /* Scales the image to fill the container */
   background-position: center;
@@ -115,7 +115,7 @@ html {
 }
 
 .about_us_banner {
-  background-image: url("../assets/about_us_banner.jpg");
+  background-image: url("/assets/about_us_banner.jpg");
   background-size: cover;
   /* Scales the image to fill the container */
   background-position: center;
@@ -127,7 +127,7 @@ html {
 }
 
 .bg_img_02 {
-  background-image: url("../assets/bg_img_02.jpg");
+  background-image: url("/assets/bg_img_02.jpg");
   background-size: cover;
   /* Scales the image to fill the container */
   background-position: center;
@@ -139,7 +139,7 @@ html {
 }
 
 .banner_01 {
-  background-image: url("../assets/banner_01.jpg");
+  background-image: url("/assets/banner_01.jpg");
   background-size: cover;
   /* Scales the image to fill the container */
   background-position: center;

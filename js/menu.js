@@ -17,7 +17,7 @@ export const Menu_ = `
               </svg>
             </div>
             <div>
-              <a href="index.html" class="font-semibold text-white">
+              <a href="/" class="font-semibold text-white">
                 Home
                 <span class="absolute inset-0"></span>
               </a>
@@ -34,7 +34,7 @@ export const Menu_ = `
               </svg>
             </div>
             <div>
-              <a href="news.html" class="font-semibold text-white">
+              <a href="/news/" class="font-semibold text-white">
                 News
                 <span class="absolute inset-0"></span>
               </a>
@@ -70,7 +70,7 @@ export const Menu_ = `
               </svg>
             </div>
             <div>
-              <a href="content.html" class="font-semibold text-white">
+              <a href="/content/" class="font-semibold text-white">
                 Content
                 <span class="absolute inset-0"></span>
               </a>
@@ -88,7 +88,7 @@ export const Menu_ = `
               </svg>
             </div>
             <div>
-              <a href="about_us.html" class="font-semibold text-white">
+              <a href="/about.html" class="font-semibold text-white">
                 About us
                 <span class="absolute inset-0"></span>
               </a>
@@ -97,7 +97,7 @@ export const Menu_ = `
           </div>
         </div>
         <div class="grid grid-cols-2 divide-x divide-white/10 bg-gray-700/50">
-          <a href="legal.html"
+          <a href="/legal.html"
             class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-white hover:bg-gray-700/50">
             <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true"
               class="size-5 flex-none text-gray-300">
@@ -107,7 +107,7 @@ export const Menu_ = `
             </svg>
             Legal
           </a>
-          <a href="contact_us.html"
+          <a href="/contact.html"
             class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-white hover:bg-gray-700/50">
             <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
               class="size-5 flex-none text-gray-300">
