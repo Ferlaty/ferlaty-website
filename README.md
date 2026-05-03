@@ -18,7 +18,9 @@
 
   * `/js/`: JavaScript scripts used on the website.
   * `/css/`: CSS styles.
-  * `/assets/`: Images
+  * `/assets/`: Images.
+  * `/content/`: Subpages for our projects.
+  * `/news/`: Subpages for our news.
 
 ---
 
