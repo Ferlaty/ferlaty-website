@@ -202,8 +202,8 @@ code {
   /* Centers the image */
   background-repeat: no-repeat;
   position: relative;
-  -webkit-mask-image: linear-gradient(to top, transparent 10%, black 20%);
-  mask-image: linear-gradient(to top, transparent 10%, black 20%);
+  -webkit-mask-image: linear-gradient(to top, transparent 5%, black 15%);
+  mask-image: linear-gradient(to top, transparent 5%, black 15%);
 }
 
 .mainBanner::after {
