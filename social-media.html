@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="content" content="Ferlaty - Social media: Our social media accounts.">
+  <meta name="description" content="Ferlaty - Social media: Our social media accounts.">
   <link rel="canonical" href="https://ferlaty.pages.dev/social-media" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ferlaty | Social media</title>
@@ -21,7 +21,7 @@
 </head>
 
 
-<body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col min-w-full" id="body">
+<body class="bg-slate-950 text-white font-sans min-h-screen flex flex-col min-w-full" id="body">
 
   <a id="myBtn" title="Go to top" href="#"><svg width="50px" height="50px" viewBox="0 0 24 24">
       <path
@@ -40,55 +40,7 @@
       class="inline-block m mt-0 px-10 py-2 bg-cyan-550 rounded-lg hover:bg-cyan-700 transition"><b>Accept</b></button>
   </div>
 
-  <script>
-    setCookie = (cName, cValue, expDays) => {
-      let date = new Date();
-      date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
-      const expires = "expires=" + date.toUTCString();
-      document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
-    }
-
-    getCookie = (cName) => {
-      const name = cName + "=";
-      const cDecoded = decodeURIComponent(document.cookie);
-      const cArr = cDecoded.split("; ");
-      let value;
-      cArr.forEach(val => {
-        if (val.indexOf(name) === 0) value = val.substring(name.length);
-      })
-
-      return value;
-    }
-
-    document.querySelector("#accept-cookies").addEventListener("click", () => {
-      document.querySelector("#cookie-banner").style.display = "none";
-      setCookie("cookies_accepted", true, 365);
-      loadGoogleAnalytics();
-    })
-
-    cookieMessage = () => {
-      if (!getCookie("cookies_accepted"))
-        document.querySelector("#cookie-banner").style.display = "block";
-    }
-
-    window.addEventListener("load", cookieMessage);
-
-    // Load GA only after consent
-    function loadGoogleAnalytics() {
-      const script = document.createElement('script');
-      script.src = "https://www.googletagmanager.com/gtag/js?id=G-CDTSQCSBVM";
-      script.async = true;
-      document.head.appendChild(script);
-
-      script.onload = function () {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-CDTSQCSBVM');
-      };
-    }
-
-  </script>
+  <script src="/js/cookieAcceptScript.js"></script>
 
   <!--Menu button-->
   <div class="relative">

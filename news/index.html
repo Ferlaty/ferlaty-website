@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="content" content="Ferlaty - News page: Here you find the news about our projects or the brand itself.">
+    <meta name="description" content="Ferlaty - News page: Here you find the news about our projects or the brand itself.">
     <link rel="canonical" href="https://ferlaty.pages.dev/news/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferlaty | News</title>
@@ -23,7 +23,7 @@
 </head>
 
 
-<body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col min-w-full" id="body">
+<body class="bg-slate-950 text-white font-sans min-h-screen flex flex-col min-w-full" id="body">
 
     <a id="myBtn" title="Go to top" href="#"><svg width="50px" height="50px" viewBox="0 0 24 24">
             <path
@@ -42,55 +42,7 @@
             class="inline-block m mt-0 px-10 py-2 bg-cyan-550 rounded-lg hover:bg-cyan-700 transition"><b>Accept</b></button>
     </div>
 
-    <script>
-        setCookie = (cName, cValue, expDays) => {
-            let date = new Date();
-            date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
-            const expires = "expires=" + date.toUTCString();
-            document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
-        }
-
-        getCookie = (cName) => {
-            const name = cName + "=";
-            const cDecoded = decodeURIComponent(document.cookie);
-            const cArr = cDecoded.split("; ");
-            let value;
-            cArr.forEach(val => {
-                if (val.indexOf(name) === 0) value = val.substring(name.length);
-            })
-
-            return value;
-        }
-
-        document.querySelector("#accept-cookies").addEventListener("click", () => {
-            document.querySelector("#cookie-banner").style.display = "none";
-            setCookie("cookies_accepted", true, 365);
-            loadGoogleAnalytics();
-        })
-
-        cookieMessage = () => {
-            if (!getCookie("cookies_accepted"))
-                document.querySelector("#cookie-banner").style.display = "block";
-        }
-
-        window.addEventListener("load", cookieMessage);
-
-        // Load GA only after consent
-        function loadGoogleAnalytics() {
-            const script = document.createElement('script');
-            script.src = "https://www.googletagmanager.com/gtag/js?id=G-CDTSQCSBVM";
-            script.async = true;
-            document.head.appendChild(script);
-
-            script.onload = function () {
-                window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'G-CDTSQCSBVM');
-            };
-        }
-
-    </script>
+    <script src="/js/cookieAcceptScript.js"></script>
 
     <div class="relative">
         <button popovertarget="desktop-menu-solutions" style="position: fixed; z-index: 2;" id="toggleScroll"
@@ -115,15 +67,7 @@
             container.innerHTML = Menu_;
         </script>
 
-        <header class="p-6 bg-stone-900 shadow-md display" style="position: fixed; width: 100%; z-index: 1;">
-            <a href="/"><img src="/assets/ico.png" alt="logo" style="float:right" width="50px" height="50px"
-                    class="header_icon"></a>
-            <h1 class="text-3xl font-bold"><a href="/">Ferlaty</a></h1>
-            <p class="text-gray-600">
-            <div class="container">News</p>
-        </header>
-
-        <div class="h-24"></div>
+        <div id="header"></div>
 
         <div class="flex flex-col min-h-screen items-center justify-center bg_img_02 relative text-center">
             <h2 class="text-7xl mb-3 text-center reveal"><b>News from and about Ferlaty</b></h2>
@@ -155,6 +99,7 @@
                             </p>
                         </a>
                     </div>
+                    <div class="h-6"></div>
                     <div class="card block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg reveal hover:scale-105
            transition-all duration-700 ease-in-out">
                         <a href="/content/">
@@ -205,6 +150,11 @@
 
     <script src="/js/loopForNews.js" type="module"></script>
     <script src="/js/fly-in-animationForNews.js"></script>
+    <script type="module">
+        import { HEADER } from '/js/headerForNews.js'
+
+        document.getElementById("header").innerHTML = HEADER;
+    </script>
 </body>
 
 </html>

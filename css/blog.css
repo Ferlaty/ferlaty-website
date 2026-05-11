@@ -8,6 +8,8 @@
 .leftcolumn {
   float: left;
   width: 75%;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
 /* Right column */

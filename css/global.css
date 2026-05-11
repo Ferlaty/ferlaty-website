@@ -176,8 +176,8 @@ html {
 
 code {
   font-family: Consolas,"courier new";
-  color: rgb(0, 0, 0);
-  background-color: #b1b1b1;
+  color: rgb(255, 255, 255);
+  background-color: #1c1917;
   padding: 2px;
   overflow-wrap: break-word;
 }
@@ -188,7 +188,7 @@ code {
 
 .bg-video {
   position: absolute;
-  inset: 0;
+  inset: 0; 
   width: 100%;
   height: 100%;
   object-fit: cover;

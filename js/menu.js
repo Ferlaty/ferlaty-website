@@ -3,11 +3,11 @@ export const Menu_ = `
 <el-popover id="desktop-menu-solutions" anchor="bottom" popover
       class="w-screen max-w-max overflow-visible bg-transparent px-0 transition transition-discrete [--anchor-gap:--spacing(5)] backdrop:bg-transparent open:flex data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
       <div
-        class="w-[80dvw] h-fit overflow-hidden rounded-3xl bg-cyan-800 text-sm/6 outline-1 -outline-offset-1 outline-white/10 justify-center min-h-0">
+        class="w-[80dvw] h-fit overflow-hidden rounded-xl bg-stone-800 text-sm/6 outline-1 -outline-offset-1 outline-white/10 justify-center min-h-0">
         <div class="p-4">
           <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-white/5 content-fill">
             <div
-              class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700">
+              class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-black/50 group-hover:bg-black/35">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
                 aria-hidden="true" class="size-6 text-gray-300 group-hover:text-white">
                 <path d="M3 9.75L12 3l9 6.75V21a.75.75 0 01-.75.75H3.75A.75.75 0 013 21V9.75z" stroke-linecap="round"
@@ -26,7 +26,7 @@ export const Menu_ = `
           </div>
           <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-white/5">
             <div
-              class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700">
+              class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-black/50 group-hover:bg-black/35">
               <svg x="0px" y="0px" width="100" height="100" viewBox="0 0 46 46" stroke="currentColor" fill="currentColor" stroke-width="1.5" class="size-6 text-gray-300 group-hover:text-white">
                 <path
                   d="M 10 5 C 7.2504839 5 5 7.2504839 5 10 L 5 38 C 5 40.749516 7.2504839 43 10 43 L 32 43 A 1.0001 1.0001 0 1 0 32 41 L 10 41 C 8.3315161 41 7 39.668484 7 38 L 7 10 C 7 8.3315161 8.3315161 7 10 7 L 32 7 C 33.668484 7 35 8.3315161 35 10 L 35 39 C 35 41.197334 36.802666 43 39 43 C 41.197334 43 43 41.197334 43 39 L 43 22 C 43 20.221571 42.065214 18.647556 40.65625 17.763672 A 1.0001 1.0001 0 1 0 39.591797 19.457031 C 40.436833 19.987147 41 20.920429 41 22 L 41 39 C 41 40.116666 40.116666 41 39 41 C 37.883334 41 37 40.116666 37 39 L 37 10 C 37 7.2504839 34.749516 5 32 5 L 10 5 z M 12 14 A 1.0001 1.0001 0 1 0 12 16 L 30 16 A 1.0001 1.0001 0 1 0 30 14 L 12 14 z M 12 20 A 1.0001 1.0001 0 1 0 12 22 L 30 22 A 1.0001 1.0001 0 1 0 30 20 L 12 20 z M 13 26 C 11.829643 26 11 27.038255 11 28.142578 L 11 33.857422 C 11 34.961745 11.829643 36 13 36 L 19 36 C 20.170357 36 21 34.961745 21 33.857422 L 21 28.142578 C 21 27.038255 20.170357 26 19 26 L 13 26 z M 25 27 A 1.0001 1.0001 0 1 0 25 29 L 30 29 A 1.0001 1.0001 0 1 0 30 27 L 25 27 z M 13 28 L 19 28 C 18.93364 28 19 27.9849 19 28.142578 L 19 33.857422 C 19 34.015099 18.933643 34 19 34 L 13 34 C 13.06636 34 13 34.0151 13 33.857422 L 13 28.142578 C 13 27.984901 13.066357 28 13 28 z M 25 33 A 1.0001 1.0001 0 1 0 25 35 L 30 35 A 1.0001 1.0001 0 1 0 30 33 L 25 33 z">
@@ -43,7 +43,7 @@ export const Menu_ = `
           </div>
           <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-white/5">
             <div
-              class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700">
+              class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-black/50 group-hover:bg-black/35">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
                 aria-hidden="true" class="size-6 text-gray-300 group-hover:text-white">
                 <path
@@ -52,7 +52,7 @@ export const Menu_ = `
               </svg>
             </div>
             <div>
-              <a href="social_media.html" class="font-semibold text-white">
+              <a href="/social-media.html" class="font-semibold text-white">
                 Social media
                 <span class="absolute inset-0"></span>
               </a>
@@ -61,7 +61,7 @@ export const Menu_ = `
           </div>
           <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-white/5">
             <div
-              class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700">
+              class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-black/50 group-hover:bg-black/35">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
                 aria-hidden="true" class="size-6 text-gray-300 group-hover:text-white">
                 <path
@@ -79,7 +79,7 @@ export const Menu_ = `
           </div>
           <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-white/5">
             <div
-              class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700">
+              class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-black/50 group-hover:bg-black/35">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
                 aria-hidden="true" class="size-6 text-gray-300 group-hover:text-white">
                 <path
@@ -96,9 +96,9 @@ export const Menu_ = `
             </div>
           </div>
         </div>
-        <div class="grid grid-cols-2 divide-x divide-white/10 bg-gray-700/50">
+        <div class="grid grid-cols-2 divide-x divide-white/10 bg-black/50">
           <a href="/legal.html"
-            class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-white hover:bg-gray-700/50">
+            class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-white hover:bg-black/35">
             <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true"
               class="size-5 flex-none text-gray-300">
               <path
@@ -108,7 +108,7 @@ export const Menu_ = `
             Legal
           </a>
           <a href="/contact.html"
-            class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-white hover:bg-gray-700/50">
+            class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-white hover:bg-black/35">
             <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
               class="size-5 flex-none text-gray-300">
               <path

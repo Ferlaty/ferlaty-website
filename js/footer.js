@@ -30,7 +30,7 @@ export const Footer_ = `
         <div class="footer-classic__links">
           <h3 class="footer-classic__heading">Resources</h3>
           <ul>
-            <li><a href="multiple_app_launcher.html#">Multiple App Launcher</a></li>
+            <li><a href="/content/multiple-app-launcher/#">Multiple App Launcher</a></li>
             <li><a href="/content/it-automation-toolkit/#">IT Automation Toolkit</a></li>
             <li><a href="https://www.youtube.com/@Ferlaty">Videos</a></li>
             <li><a href="https://www.overtake.gg/members/italy-studio.3541341/">Assetto Corsa mods</a></li>

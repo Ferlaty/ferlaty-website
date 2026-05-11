@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="content" content="Ferlaty - Legal">
+  <meta name="description" content="Ferlaty - Legal">
+  <meta name="author" content="Ferlaty">
+  <meta name="date" content="2026-03-14">
   <link rel="canonical" href="https://ferlaty.pages.dev/legal" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ferlaty | Legal</title>
@@ -20,7 +22,7 @@
   <meta property="og:type" content="website">
 </head>
 
-<body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col min-w-full">
+<body class="bg-slate-950 text-white font-sans min-h-screen flex flex-col min-w-full">
 
   <a id="myBtn" title="Go to top" href="#"><svg width="50px" height="50px" viewBox="0 0 24 24">
       <path
@@ -39,55 +41,7 @@
       class="inline-block m mt-0 px-10 py-2 bg-cyan-550 rounded-lg hover:bg-cyan-700 transition"><b>Accept</b></button>
   </div>
 
-  <script>
-    setCookie = (cName, cValue, expDays) => {
-      let date = new Date();
-      date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
-      const expires = "expires=" + date.toUTCString();
-      document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
-    }
-
-    getCookie = (cName) => {
-      const name = cName + "=";
-      const cDecoded = decodeURIComponent(document.cookie);
-      const cArr = cDecoded.split("; ");
-      let value;
-      cArr.forEach(val => {
-        if (val.indexOf(name) === 0) value = val.substring(name.length);
-      })
-
-      return value;
-    }
-
-    document.querySelector("#accept-cookies").addEventListener("click", () => {
-      document.querySelector("#cookie-banner").style.display = "none";
-      setCookie("cookies_accepted", true, 365);
-      loadGoogleAnalytics();
-    })
-
-    cookieMessage = () => {
-      if (!getCookie("cookies_accepted"))
-        document.querySelector("#cookie-banner").style.display = "block";
-    }
-
-    window.addEventListener("load", cookieMessage);
-
-    // Load GA only after consent
-    function loadGoogleAnalytics() {
-      const script = document.createElement('script');
-      script.src = "https://www.googletagmanager.com/gtag/js?id=G-CDTSQCSBVM";
-      script.async = true;
-      document.head.appendChild(script);
-
-      script.onload = function () {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-CDTSQCSBVM');
-      };
-    }
-
-  </script>
+  <script src="/js/cookieAcceptScript.js"></script>
 
   <button popovertarget="desktop-menu-solutions" style="position: fixed; z-index: 2;" id="toggleScroll"
     class="absolute top-0 left-1/2 transform -translate-x-1/2 inline-flex items-center gap-x-1 text-sm/60 font-semibold text-black text-[30px] my-8">
