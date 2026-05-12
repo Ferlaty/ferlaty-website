@@ -30,7 +30,7 @@
         fill="#FFFFFF" />
     </svg></a>
 
-  <script src="/js/detect_scroll_direction_for_upp_btn.js"></script>  
+  <script src="/js/detect_scroll_direction_for_upp_btn.js"></script>
 
   <!-- Cookie Consent Banner -->
   <div id="cookie-banner"
@@ -128,13 +128,14 @@
     <div class="flex flex-col min-h-screen items-center justify-center banner_MultiplAppLauncher relative text-center">
       <video autoplay loop muted playsinline class="bg-video">
         <source src="/assets/MultipleAppLauncher.webm" type="video/webm">
-        </video>
-      <h2 class="text-7xl font-bold mb-3 reveal"><a href="/content/multiple-app-launcher/" class="hover:underline">Multiple
+      </video>
+      <h2 class="text-7xl font-bold mb-3 reveal"><a href="/content/multiple-app-launcher/"
+          class="hover:underline">Multiple
           App Launcher</a></h2>
-          <p class="text-8xl font-bold mb-3 reveal">-</p>
-          <h2 class="text-6xl font-bold mb-3 reveal">
-            Previous releases
-          </h2>
+      <div class="w-1/4 h-0.5 bg-gradient-to-r from-transparent via-white to-transparent my-8 reveal"></div>
+      <h2 class="text-6xl font-bold mb-3 reveal">
+        Previous releases
+      </h2>
       <a href="#releases">
         <svg width="200px" height="200px" viewBox="0 0 24 24" fill="white" stroke="none" class="reveal">
           <path
@@ -147,7 +148,13 @@
     <main class="flex-1 p-6 max-w-6xl mx-auto">
       <section class="mb-8" id="releases">
         <div class="h-24"></div>
-        <h2 class="text-6xl text-center font-semibold mb-3 reveal"><br>Previous releases:</h2>
+        <div class="flex justify-between">
+          <h2 class="text-6xl text-center font-semibold mb-3 reveal">Previous releases:</h2>
+          <a href="/content/multiple-app-launcher/"
+            class="inline-flex items-center text-center gap-2 text-xl text-neutral-400 hover:text-neutral-100 transition-colors mb-12">
+            <p class="reveal">&#8592; Go back</p>
+          </a>
+        </div>
         <div class="h-24"></div>
 
         <!-- 1.4.1 -->
@@ -176,38 +183,40 @@
               </thead>
               <tbody class="divide-y divide-gray-600">
                 <tr class="divide-x divide-gray-600 text-md">
-                  <td class="text-center py-4 font-semibold">Windows<br>(Released on 9.5.2026)</td>
+                  <td class="text-center py-4 font-semibold">Windows<br>(Released on 12.5.2026)</td>
                   <td class="text-center justify-center flex py-4"><a
                       href="https://github.com/Ferlaty/multiple_app_launcher/releases/download/v1.4.1/multiple_app_launcher1.4.1-Windows.zip"
-                      id="download_i"
-                      class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+                      id="download_i" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out">
                       <strong>Download(20MB)</strong>
                     </a></td>
                   <td class="text-center py-4"><a
-                      href="https://www.virustotal.com/gui/file/6b421b57be03b85a1ae75c4173a7461b23b8e82311c60f4eb8b296e306d04b27"
+                      href="https://www.virustotal.com/gui/file/54410a974949579435ad479d4dcbd2b2414dd283e7e3c45965d63fce05ea63a7?nocache=1"
                       class="hover:underline hover:text-blue-700"><i>VirusTotal report</i></a></td>
                   <td class="text-center justify-center flex py-4">
                     <a href="https://github.com/Ferlaty/multiple_app_launcher/archive/refs/tags/v1.4.1.zip"
-                      id="download_i"
-                      class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+                      id="download_i" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out">
                       <i>Download Source Code</i>
                     </a>
                   </td>
                 </tr>
                 <tr class="divide-x divide-gray-600 text-md">
-                  <td class="text-center py-4 font-semibold">Linux<br>(Released on -.5.2026)</td>
+                  <td class="text-center py-4 font-semibold">Linux<br>(Released on 12.5.2026)</td>
                   <td class="text-center py-4">
-                    -
+                    <a href="https://github.com/Ferlaty/multiple_app_launcher/releases/download/v1.4.1/multiple_app_launcher1.4.1-Linux.tar.gz"
+                      id="download_i" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+           transition-all duration-700 ease-in-out">
+                      <strong>Download(19MB)</strong>
+                    </a>
                   </td>
                   <td class="text-center py-4">
-                    -
+                    <a href="https://www.virustotal.com/gui/file/e201bcde33a0035b4f9adaaf0a12e8c97a06b015a4e45134759227e910978d14?nocache=1"
+                      class="hover:underline hover:text-blue-700"><i>VirusTotal report</i></a>
                   </td>
                   <td class="text-center justify-center flex py-4">
                     <a href="https://github.com/Ferlaty/multiple_app_launcher/archive/refs/tags/v1.4.1.zip"
-                      id="download_i"
-                      class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+                      id="download_i" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out">
                       <i>Download Source Code</i>
                     </a>
@@ -255,8 +264,7 @@
                   <td class="text-center py-4 font-semibold">Windows<br>(Released on 15.4.2026)</td>
                   <td class="text-center justify-center flex py-4"><a
                       href="https://github.com/Ferlaty/multiple_app_launcher/releases/download/v1.4.0/multiple_app_launcher1.4.0-windows-.zip"
-                      id="download_i"
-                      class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+                      id="download_i" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out">
                       <strong>Download(20MB)</strong>
                     </a></td>
@@ -265,8 +273,7 @@
                       class="hover:underline hover:text-blue-700"><i>VirusTotal report</i></a></td>
                   <td class="text-center justify-center flex py-4">
                     <a href="https://github.com/Ferlaty/multiple_app_launcher/archive/refs/tags/v1.4.0.zip"
-                      id="download_i"
-                      class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+                      id="download_i" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out">
                       <i>Download Source Code</i>
                     </a>
@@ -276,8 +283,7 @@
                   <td class="text-center py-4 font-semibold">Linux<br>(Released on 16.4.2026)</td>
                   <td class="text-center py-4"><a
                       href="https://github.com/Ferlaty/multiple_app_launcher/releases/download/v1.4.0/multiple_app_launcher1.4.0-linux-.tar.gz"
-                      id="download_i"
-                      class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+                      id="download_i" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out">
                       <strong>Download(19MB)</strong>
                     </a></td>
@@ -287,8 +293,7 @@
                   </td>
                   <td class="text-center justify-center flex py-4">
                     <a href="https://github.com/Ferlaty/multiple_app_launcher/archive/refs/tags/v1.4.0.zip"
-                      id="download_i"
-                      class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+                      id="download_i" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out">
                       <i>Download Source Code</i>
                     </a>
@@ -313,8 +318,7 @@
             Released on 30.3.2026.</p>
           <div class="flex justify-between">
             <a href="https://github.com/Ferlaty/multiple_app_launcher/releases/download/v1.3.0/multiple_app_launcher1.3.0.zip"
-              id="download_i"
-              class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+              id="download_i" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out">
               <strong>Download(20MB)</strong>
             </a>
@@ -338,8 +342,7 @@
           <p class="text-l font-semibold mb-3">New, fresh and modern look of the settings app.<br>
             Released on 4.3.2026.</p>
           <a href="https://github.com/Ferlaty/multiple_app_launcher/releases/download/v1.2.1/multiple_app_launcher1.2.1.zip"
-            id="download_i"
-            class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+            id="download_i" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out">
             <strong>Download(20MB)</strong></a>
           <p class="text-gray-400"><a
@@ -357,8 +360,7 @@
           <p class="text-l font-semibold mb-3">Added the option to change the delay time how you want.<br>
             Released on 21.12.2025.</p>
           <a href="https://github.com/Ferlaty/multiple_app_launcher/releases/download/v1.2.0/multiple_app_launcher1.2.0.zip"
-            id="download_i"
-            class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+            id="download_i" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out">
             <strong>Download(20MB)</strong></a>
           <p class="text-gray-400"><a
@@ -383,8 +385,7 @@
             Exit the launcher. Note that it can close the apps launched by it.<br>
           </p>
           <a href="https://github.com/Ferlaty/multiple_app_launcher/releases/download/v1.1.1/multiple_app_launcher1.1.1.zip"
-            id="download_i"
-            class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+            id="download_i" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out">
             <strong>Download(23MB)</strong></a>
           <p class="text-gray-400"><a
@@ -402,8 +403,7 @@
           <p class="text-l font-semibold mb-3">Major improvements, fixed most of the errors and added new features to
             the app.</p>
           <a href="https://github.com/Ferlaty/multiple_app_launcher/releases/download/v1.1.0/multiple_app_launcher1.1.0.zip"
-            id="download_i"
-            class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+            id="download_i" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out">
             <strong>Download(23MB)</strong></a>
           <p class="text-gray-400"><a
@@ -420,8 +420,7 @@
           </summary>
           <p class="text-l font-semibold mb-3">First ever release.</p>
           <a href="https://github.com/Ferlaty/multiple_app_launcher/releases/download/v1.0.0/multiple_app_launcher1.0.0.zip"
-            id="download_i"
-            class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+            id="download_i" class="inline-block mt-4 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out">
             <strong>Download(22MB)</strong></a>
           <p class="text-gray-400"><a

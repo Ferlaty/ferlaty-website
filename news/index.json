@@ -1,5 +1,13 @@
 {
 "News":[
+    {   "PostID":"new-release-multiple-app-launcher-version-1.4.1",
+        "bannerImg":"",
+        "Title":"<b>New release of the Multiple App Launcher (1.4.1)</b>",
+        "Date":"12th May 2026",
+        "ContentShort":"We released a new version of the <a href='/content/multiple-app-launcher/' class='hover:underline hover:text-blue-700'>Multiple App Launcher</a> project...",
+        "Content":"We released a new version of the <a href='/content/multiple-app-launcher/' class='hover:underline hover:text-blue-700'>Multiple App Launcher</a> project - v1.4.1. This version brings minor changes related to fixed typos and more file extensions depending on the OS."
+    },
+
     {   "PostID":"redesign-of-the-website",
         "bannerImg":"",
         "Title":"<b>A smaller re-desing of the Ferlaty website</b>",
