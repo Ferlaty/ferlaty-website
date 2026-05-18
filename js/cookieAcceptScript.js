@@ -1,3 +1,14 @@
+const CookieBannerPlace = document.getElementById("COOKIE");
+
+CookieBannerPlace.innerHTML = `<div id="cookie-banner"
+    style="position:fixed;bottom:0;width:100%;color:#fefeff;padding:15px;text-align:center;display:none; z-index: 1;" class="bg-[#000105]/75">
+    We use cookies to ensure you have the best experience on our website.
+    <a href="/legal.html" class="text-blue-600 hover:underline">Read more</a>
+    <button id="accept-cookies" style="margin-left:10px;padding:5px 10px;"
+      class="inline-block m mt-0 px-10 py-2 bg-cyan-550 rounded-lg hover:bg-[#000100] transition"><b>Accept</b></button>
+  </div>
+`;
+
 setCookie = (cName, cValue, expDays) => {
             let date = new Date();
             date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
