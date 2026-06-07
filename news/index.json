@@ -1,5 +1,13 @@
 {
 "News":[
+    {   "PostID":"windows-11-update-screen-release",
+        "bannerImg":"/assets/Fake_Windows_11_Update_Screen.png",
+        "Title":"<b>Windows 11 Update Screen</b>",
+        "Date":"7th June 2026",
+        "ContentShort":"We released a prank tool called 'Windows 11 Update Screen' as an open source project (<a href='https://github.com/ferlaty/fake-windows-update' class='hover:underline hover:text-blue-700'>GitHub repo</a>) great for...",
+        "Content":"We released a prank tool called 'Windows 11 Update Screen' as an open source project (<a href='https://github.com/ferlaty/fake-windows-update' class='hover:underline hover:text-blue-700'>GitHub repo</a>) great for pranking your friends or just for fun. It is a web application that you can run in any browser. Check it out <a href='https://ferlaty.github.io/fake-windows-update/' class='hover:underline hover:text-blue-700'>here</a>."
+    },
+
     {   "PostID":"new-release-multiple-app-launcher-version-1.4.1",
         "bannerImg":"",
         "Title":"<b>New release of the Multiple App Launcher (1.4.1)</b>",

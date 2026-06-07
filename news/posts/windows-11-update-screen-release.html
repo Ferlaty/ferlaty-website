@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ferlaty - Windows 11 Update Screen release.">
+    <link rel="canonical" href="https://ferlaty.pages.dev/news/posts/windows-11-update-screen-release" />
+    <meta name="author" content="Ferlaty">
+    <meta name="date" content="2026-06-07">
+    <meta name="postid" content="windows-11-update-screen-release">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferlaty | Windows 11 Update Screen release</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/menuanimation.css">
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <meta property="og:site_name" content="Ferlaty">
+    <meta property="og:title" content="Ferlaty | Windows 11 Update Screen release">
+    <meta property="og:description"
+        content="Ferlaty - Windows 11 Update Screen release.">
+    <meta property="og:image" content="https://ferlaty.pages.dev/assets/main_banner.png">
+    <meta property="og:url" content="https://ferlaty.pages.dev/news/posts/windows-11-update-screen-release">
+    <meta property="og:type" content="website">
+</head>
+
+
+<body class="bg-slate-950 text-white font-sans min-h-screen flex flex-col min-w-full" id="body">
+
+    <div id="BtnTopPlacholder"></div>
+
+    <script src="/js/detect_scroll_direction_for_upp_btn.js"></script>  
+
+    <!-- Cookie Consent Banner -->
+    <div id="COOKIE"></div>
+
+    <script src="/js/cookieAcceptScript.js"></script>
+
+    <div id="MenuBtn"></div>
+
+        <script src="/js/stopScrollingForMenuBar.js"></script>
+
+        <div id="menu_"></div>
+
+        <script type="module">
+            import { Menu_ } from '/js/menu.js'
+
+            const container = document.getElementById('menu_');
+            container.innerHTML = Menu_;
+        </script>
+
+        <div id="header"></div>
+
+    <main class="max-w-2xl mx-auto px-6 py-16">
+        <div id="postContent"></div>
+    </main>
+
+    <div id="footer_"></div>
+
+
+    <script type="module">
+        import { Footer_ } from '/js/footer.js'
+
+        const container = document.getElementById('footer_');
+        container.innerHTML = Footer_;
+    </script>
+
+    <script src="/js/fly-in-animation.js"></script>
+    <script src="/js/scriptForPosts.js" type="module"></script>
+    <script type="module">
+        import { HEADER } from '/js/headerForNews.js'
+
+        document.getElementById("header").innerHTML = HEADER;
+    </script>
+</body>
+
+</html>

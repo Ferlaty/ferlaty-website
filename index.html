@@ -41,111 +41,125 @@
   <!-- Cookie Consent Banner -->
   <div id="COOKIE"></div>
 
- <script src="/js/cookieAcceptScript.js"></script>
+  <script src="/js/cookieAcceptScript.js"></script>
 
 
-    <div id="MenuBtn"></div>
+  <div id="MenuBtn"></div>
 
-    <script src="./js/stopScrollingForMenuBar.js"></script>
+  <script src="./js/stopScrollingForMenuBar.js"></script>
 
-    <div id="menu_"></div>
+  <div id="menu_"></div>
 
-    <script type="module">
-      import { Menu_ } from './js/menu.js'
+  <script type="module">
+    import { Menu_ } from './js/menu.js'
 
-      const container = document.getElementById('menu_');
-      container.innerHTML = Menu_;
-    </script>
+    const container = document.getElementById('menu_');
+    container.innerHTML = Menu_;
+  </script>
 
-    <header class="p-6 bg-stone-900 shadow-md display" style="position: fixed; width: 100%; z-index: 1;">
-      <a href="/"><img src="assets\ico.png" alt="logo" style="float:right" width="50px" height="50px"
-          class="header_icon"></a>
-      <h1 class="text-3xl font-bold"><a href="/">Ferlaty</a></h1>
-      <p class="text-gray-600">
-      <div class="container">Content Creation</p>
-    </header>
+  <header class="p-6 bg-stone-900 shadow-md display" style="position: fixed; width: 100%; z-index: 1;">
+    <a href="/"><img src="assets\ico.png" alt="logo" style="float:right" width="50px" height="50px"
+        class="header_icon"></a>
+    <h1 class="text-3xl font-bold"><a href="/">Ferlaty</a></h1>
+    <p class="text-gray-600">
+    <div class="container">Content Creation</p>
+  </header>
 
-      <main class="flex-1">
-        <div class="flex flex-col min-h-screen items-center justify-center mainBanner relative text-center">
-          <video autoplay loop muted playsinline class="bg-video">
-            <source src="/assets/mainBanner.webm" type="video/webm">
-          </video>
-          <h2 class="inline-block text-7xl font-bold mb-3 text-white typewriter w-fit">Content creation</h2><br>
-          <h2 class="text-2xl font-semibold mb-3  hover:underline text-center text-white"><a href="/about.html">We
-              create
-              digital
-              content: apps, videos, mods, 3D assests...</a></h2><br>
-          <div class="justify-between flex">
-            <a href="#apps_content" class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+  <main class="flex-1">
+    <div class="flex flex-col min-h-screen items-center justify-center mainBanner relative text-center">
+      <video autoplay loop muted playsinline class="bg-video">
+        <source src="/assets/mainBanner.webm" type="video/webm">
+      </video>
+      <h2 class="inline-block text-7xl font-bold mb-3 text-white typewriter w-fit">Content creation</h2><br>
+      <h2 class="text-2xl font-semibold mb-3  hover:underline text-center text-white"><a href="/about.html">We
+          create
+          digital
+          content: apps, videos, mods, 3D assests...</a></h2><br>
+      <div class="justify-between flex">
+        <a href="#apps_content" class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out hover:ring-2 hover:ring-cyan-500 hover:ring-opacity-50
                hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]">
-              Apps</a>
-            <div class="w-24"></div>
-            <a href="#gamemods_content" class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
+          Apps</a>
+        <div class="w-24"></div>
+        <a href="#gamemods_content" class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition hover:scale-105
            transition-all duration-700 ease-in-out hover:ring-2 hover:ring-cyan-500 hover:ring-opacity-50
                hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]">
-              Game mods</a>
-          </div>
-        </div>
+          Game mods</a>
+      </div>
+    </div>
 
 
-        <div class="p-2 max-w-6xl mx-auto min-h-screen">
-          <section class="mb-8">
-            <div class="h-28" id="apps_content"></div>
-            <h2 class="text-6xl font-bold mb-3 hover:underline reveal text-center">
-              <a href="/content/">Our
-                applications</a>
-            </h2>
-            <div class="h-24"></div>
-            <h2 class="text-5xl font-semibold mb-3 hover:text-blue-700 hover:underline reveal"><a
-                href="/content/multiple-app-launcher/">Multiple App Launcher</a>
-            </h2>
-            <a href="/content/multiple-app-launcher/"><img src="assets/multiple_app_launcher.png"
-                alt="multiple_app_launcher_cover" class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg reveal hover:scale-105
+    <div class="p-2 max-w-6xl mx-auto min-h-screen">
+      <section class="mb-8">
+        <div class="h-28" id="apps_content"></div>
+        <h2 class="text-6xl font-bold mb-3 hover:underline reveal text-center">
+          <a href="/content/">Our
+            applications</a>
+        </h2>
+        <div class="h-24"></div>
+        <h2 class="text-5xl font-semibold mb-3 hover:text-blue-700 hover:underline reveal"><a
+            href="/content/multiple-app-launcher/">Multiple App Launcher</a>
+        </h2>
+        <a href="/content/multiple-app-launcher/"><img src="assets/multiple_app_launcher.png"
+            alt="multiple_app_launcher_cover" class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg reveal hover:scale-105
            transition-all duration-700 ease-in-out" style="width: 90%; height: 35%;"></a><br>
-            <div class="flex w-full items-center justify-between">
-              <p class="leading-relaxed text-grey-300 text-lg reveal"><br>A lightweight and portable app launcher with a
-                simple
-                settings executable.</p> <a href="/content/multiple-app-launcher/" class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition reveal hover:scale-105
+        <div class="flex w-full items-center justify-between">
+          <p class="leading-relaxed text-grey-300 text-lg reveal"><br>A lightweight and portable app launcher with a
+            simple
+            settings executable.</p> <a href="/content/multiple-app-launcher/" class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition reveal hover:scale-105
            transition-all duration-700 ease-in-out">
-                Download</a>
-            </div>
-            <h2 class="text-5xl font-semibold mb-3 hover:text-blue-700 hover:underline reveal"><a
-                href="/content/it-automation-toolkit/"><br><br>IT Automation Toolkit</a></h2>
-            <a href="/content/it-automation-toolkit/"><img src="assets/IT_AUTOMATION_TOOLKIT_COVER.jpg"
-                alt="it_automation_toolkit_cover" class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg reveal hover:scale-105
+            Download</a>
+        </div>
+        <h2 class="text-5xl font-semibold mb-3 hover:text-blue-700 hover:underline reveal"><a
+            href="/content/it-automation-toolkit/"><br><br>IT Automation Toolkit</a></h2>
+        <a href="/content/it-automation-toolkit/"><img src="assets/IT_AUTOMATION_TOOLKIT_COVER.jpg"
+            alt="it_automation_toolkit_cover" class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg reveal hover:scale-105
            transition-all duration-700 ease-in-out" style="width:90%; height: 55%;"></a><br>
-            <div class="flex w-full items-center justify-between">
-              <p class="leading-relaxed text-grey-300 text-lg reveal"><br>An IT toolkit with varius tools for your
-                needs.
-              </p> <a href="/content/it-automation-toolkit/" class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition reveal hover:scale-105
+        <div class="flex w-full items-center justify-between">
+          <p class="leading-relaxed text-grey-300 text-lg reveal"><br>An IT toolkit with varius tools for your
+            needs.
+          </p> <a href="/content/it-automation-toolkit/" class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition reveal hover:scale-105
            transition-all duration-700 ease-in-out">
-                Download</a>
-            </div>
-        </div>
-        <div class="flex flex-col min-h-screen items-center justify-center patreon_banner relative">
-          <h2 class="text-5xl font-semibold mb-3 reveal"><a href="https://www.patreon.com/cw/Ferlaty"><br><br>Our
-              Patreon</a>
-          </h2>
-          <p class="leading-relaxed text-grey-300 text-lg reveal"><br>Exclusive content</p><br>
-          <a href="https://www.patreon.com/cw/Ferlaty" class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition reveal hover:scale-105
-           transition-all duration-700 ease-in-out">
-            Go to our Patreon</a>
-        </div>
-        <div class="p-6 max-w-7xl mx-auto min-h-screen">
-          <h2 class="text-5xl font-semibold mb-3 hover:text-blue-700 hover:underline reveal text-center"><a
-              href="https://www.youtube.com/@Ferlaty"><br><br>YouTube channel</a>
-          </h2>
-          <p class="leading-relaxed text-grey-300 text-2xl font-semibold reveal">Mainly F1 edits<br></p>
-          <div class="relative w-full max-w-6xl mx-auto aspect-video reveal">
-            <iframe width="100%" height="100%" class="absolute top-0 left-0 w-full h-full rounded-lg shadow-[0_15px_30px_rgba(0,0,0,0.6)] hover:scale-105
-           transition-all duration-700 ease-in-out" src="https://www.youtube.com/embed/cTDlrWbwXrE?si=UAsGSgrQZLwTxiO6"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <p class="leading-relaxed text-grey-300 text-md reveal"><br>The current flagship edit about Max Verstappen.
+            Download</a>
+        </div><br><br>
+        <h2 class="text-5xl font-semibold mb-3 hover:text-blue-700 hover:underline reveal"><a
+            href="https://ferlaty.github.io/fake-windows-update/">Fake Windows 11 Update screen</a></h2>
+        <a href="https://ferlaty.github.io/fake-windows-update/"><img src="/assets/Fake_Windows_11_Update_Screen.png"
+            alt="fake_windows_11_update_screen_cover" class="block mx-auto shadow-[0_15px_30px_rgba(0,0,0,0.6)] rounded-lg reveal hover:scale-105
+           transition-all duration-700 ease-in-out" style="width: 90%; height: 55%;"></a>
+        <div class="flex w-full items-center justify-between"><br>
+          <p class="leading-relaxed text-grey-300 text-lg reveal max-w-4xl"><br>A fake Windows 11 update screen that you
+            can use to prank your friends or just for fun. It is a web
+            application that you can run in any browser.
           </p>
+          <a href="https://ferlaty.github.io/fake-windows-update/" class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition reveal hover:scale-105
+           transition-all duration-700 ease-in-out">
+            Try it out</a>
         </div>
+    </div>
+    <div class="flex flex-col min-h-screen items-center justify-center patreon_banner relative">
+      <h2 class="text-5xl font-semibold mb-3 reveal"><a href="https://www.patreon.com/cw/Ferlaty"><br><br>Our
+          Patreon</a>
+      </h2>
+      <p class="leading-relaxed text-grey-300 text-lg reveal"><br>Exclusive content</p><br>
+      <a href="https://www.patreon.com/cw/Ferlaty" class="inline-block m mt-0 px-10 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition reveal hover:scale-105
+           transition-all duration-700 ease-in-out">
+        Go to our Patreon</a>
+    </div>
+    <div class="p-6 max-w-7xl mx-auto min-h-screen">
+      <h2 class="text-5xl font-semibold mb-3 hover:text-blue-700 hover:underline reveal text-center"><a
+          href="https://www.youtube.com/@Ferlaty"><br><br>YouTube channel</a>
+      </h2>
+      <p class="leading-relaxed text-grey-300 text-2xl font-semibold reveal">Mainly F1 edits<br></p>
+      <div class="relative w-full max-w-6xl mx-auto aspect-video reveal">
+        <iframe width="100%" height="100%" class="absolute top-0 left-0 w-full h-full rounded-lg shadow-[0_15px_30px_rgba(0,0,0,0.6)] hover:scale-105
+           transition-all duration-700 ease-in-out" src="https://www.youtube.com/embed/cTDlrWbwXrE?si=UAsGSgrQZLwTxiO6"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="leading-relaxed text-grey-300 text-md reveal"><br>The current flagship edit about Max Verstappen.
+      </p>
+    </div>
     <div class="flex flex-col min-h-screen items-center justify-center game_mods_banner relative" id="gamemods_content">
       <h2 class="text-7xl font-semibold mb-3 text-center reveal"><br><br><a href="/content/">Assetto Corsa mods</a>
       </h2><br>
@@ -182,18 +196,18 @@
         free
         roam and rally for Assetto Corsa.</p>
     </div>
-  </div>
-  <div class="flex flex-col min-h-screen items-center justify-center bg_img_01 relative">
-    <h2 class="text-5xl font-semibold mb-3 text-center reveal"><br><br>Found some glitch, bug or have other reason to
-      reach out to us?
-    </h2>
-    <p class="leading-relaxed text-gray-300 text-2xl font-semibold text-center reveal">No problem!<br> Just <a
-        href="/contact.html" class="text-blue-700 hover:underline text-center">head to our "contact us" form and send
-        a message.</a> <br>
-    <p class="leading-relaxed text-gray-300 text-2xl font-bold text-center reveal">We are open for your feedback!</p>
-    </p>
-  </div>
-  </section>
+    </div>
+    <div class="flex flex-col min-h-screen items-center justify-center bg_img_01 relative">
+      <h2 class="text-5xl font-semibold mb-3 text-center reveal"><br><br>Found some glitch, bug or have other reason to
+        reach out to us?
+      </h2>
+      <p class="leading-relaxed text-gray-300 text-2xl font-semibold text-center reveal">No problem!<br> Just <a
+          href="/contact.html" class="text-blue-700 hover:underline text-center">head to our "contact us" form and send
+          a message.</a> <br>
+      <p class="leading-relaxed text-gray-300 text-2xl font-bold text-center reveal">We are open for your feedback!</p>
+      </p>
+    </div>
+    </section>
   </main>
 
   <div id="footer_"></div>
