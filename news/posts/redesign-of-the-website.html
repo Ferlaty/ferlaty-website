@@ -23,6 +23,7 @@
     <meta property="og:image" content="https://ferlaty.pages.dev/assets/main_banner.png">
     <meta property="og:url" content="https://ferlaty.pages.dev/news/posts/redesign-of-the-website">
     <meta property="og:type" content="website">
+    <meta name="headertext" content="News">
 </head>
 
 
@@ -50,7 +51,8 @@
             container.innerHTML = Menu_;
         </script>
 
-        <div id="header"></div>
+    <div id="header"></div>
+    <div class="h-24"></div>
 
     <main class="max-w-2xl mx-auto px-6 py-16">
         <div id="postContent"></div>
@@ -68,11 +70,7 @@
 
     <script src="/js/fly-in-animation.js"></script>
     <script src="/js/scriptForPosts.js" type="module"></script>
-    <script type="module">
-        import { HEADER } from '/js/headerForNews.js'
-
-        document.getElementById("header").innerHTML = HEADER;
-    </script>
+    <script src="/js/HeaderForPages.js"></script>
 </body>
 
 </html>
